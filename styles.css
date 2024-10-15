@@ -199,10 +199,13 @@ body{
     z-index: 0;
     display: flex;
     min-width: 240px;
-    width: 1485px;
-    object-position: center;
-    align-items: center;
+    /*width: 1485px;
     height: 50px;
+    object-position: center;
+    align-items: center;*/
+    left: -0.1px;
+    width: 100%;
+    height: 6%;
     top: 0;
   }
   .nav-bar {
@@ -213,19 +216,24 @@ body{
     z-index: 0;
     display: flex;
     min-width: 240px;
-    width: 1465px;
-    height: 51px;
-    top: 102px;
+    /*width: 1465px;
+    height: 51px;*/
+    left: -0.1px;
+    width: 100%;
+    height: 6%;
+    top: 100px;
   }
   .sub-nav {
     background-color: #fff;
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     display: flex;
     min-width: 240px;
-    width: 1500px;
-    height: 50px;
-    top: 50px;
+    height: 30px;
+    top: 60px;
+
+    left:460px;
+    padding: 5px; /* Agrega padding para asegurar que el texto no toque los bordes */
   }
   .promo-text {
     color: #fff;
@@ -233,40 +241,65 @@ body{
     font-size: 22px;
     position: absolute;
     z-index: 0;
-    left: 483px;
-    top: -5px;
-    text-align: center;
-  }
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    padding: 10px; /* Agrega padding para asegurar que el texto no toque los bordes */
+    box-sizing: border-box; /* Incluye el padding dentro del tamaño del elemento */
+}
   .slogan {
     color: #fff;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     font-size: 15px;
     position: absolute;
     z-index: 0;
-    left: 554px;
+    /*left: 554px;
     top: 105px;
-text-align: center;
+    text-align: center;
     width: 254px;
-    height: 18px;
+    height: 18px;*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-37%);
   }
   .logo-container {
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     position: absolute;
+    background-color: #303775;
     z-index: 0;
     display: flex;
-    width: 71px;
+    width: 80px;
     height: 34px;
-    left: 17px;
-    top: 59px;
+    content: 'PILLOW';
+    /*left: 17px;*/
+    top: 60px;
   }
   .logo-text {
     color: #fff;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
     z-index: 0;
-    left: 25px;
-    top: 55px;
+    left: 12px;
+    top: -4px;
     font: 700 15px Inria Serif, sans-serif;
+  }
+  .logo-text::before {
+    content: "PILLOW"; /* El texto que deseas insertar */
+    position: absolute;
+    z-index: 0;
+    color: #ffffff; /* Color del texto */
+    text-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
   }
   .footer {
     border-radius: 10px;
@@ -276,9 +309,12 @@ text-align: center;
     z-index: 0;
     display: flex;
     min-width: 240px;
-    width: 1440px;
+    /*width: 1440px;
     height: 173px;
-   /*right: -1px;*/
+   */
+   left: -0.1px;
+   width: 100%;
+   height: 25%;
     bottom: 0;
   }
   .footer-heading {
@@ -335,13 +371,17 @@ text-align: center;
   }
   /**********************************************************/
   .dropdownmenu ul, .dropdownmenu li {
-	margin: 0;
+
 	padding: 0;
 }
+.dropdownmenu ul li {
+  margin-right: 10px; /* Opcional: para agregar espacio entre los elementos de la lista */}
 .dropdownmenu ul {
-	background: gray;
+  flex-direction: row;
+  display: flex;
+  transform: translateY(-50%);
+
 	list-style: none;
-	width: 100%;
 }
 .dropdownmenu li {
 	float: left;
@@ -349,12 +389,13 @@ text-align: center;
 	width:auto;
 }
 .dropdownmenu a {
-	background: #30A6E6;
-	color: #FFFFFF;
+	/*background: #30A6E6;*/
+	color: #000000;
 	display: block;
 	font: bold 12px/20px sans-serif;
 	padding: 10px 25px;
 	text-align: center;
+  align-items: center;
 	text-decoration: none;
 	-webkit-transition: all .25s ease;
 	-moz-transition: all .25s ease;
@@ -364,22 +405,24 @@ text-align: center;
 }
 .dropdownmenu li:hover a {
 	background: #000000;
+  color: #ffffff;
 }
 #submenu {
 	left: 0;
 	opacity: 0;
 	position: absolute;
-	top: 35px;
+
 	visibility: hidden;
 	z-index: 1;
 }
 li:hover ul#submenu {
 	opacity: 1;
-	top: 40px;	/* adjust this as per top nav padding top & bottom comes */
+	top: 60px;	/* adjust this as per top nav padding top & bottom comes */
+left: -10px;
 	visibility: visible;
 }
 #submenu li {
-	float: none;
+	float: left;
 	width: 100%;
 }
 #submenu a:hover {
