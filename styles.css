@@ -13,11 +13,11 @@ body{
   .offer-container {
     border-radius: 30px;
     /*background-color: #5e5e5e;
-        align-items: start;
+    align-items: start;
     gap: 10px;
     overflow: hidden;
     justify-content: start;
-        left: -7px;*/
+    left: -7px;*/
     position: relative;
     display: flex;
     min-height: 965px;
@@ -26,9 +26,7 @@ body{
   .offer-image {
     /*aspect-ratio: 2.2;
     width: 1437px;
-    height: 653px;
-    left: 0;
-    object-fit: contain;*/
+    height: 653px;*/
     object-fit: contain;
     object-position: center;
     position: absolute;
