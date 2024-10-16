@@ -12,14 +12,15 @@ body{
   
   .offer-container {
     border-radius: 30px;
-    /*background-color: #5e5e5e;*/
+    /*background-color: #5e5e5e;
+        align-items: start;
+    gap: 10px;
+    overflow: hidden;
+    justify-content: start;*/
     position: relative;
     display: flex;
     min-height: 965px;
-    align-items: start;
-    gap: 10px;
-    overflow: hidden;
-    justify-content: start;
+    left: -5px;
   }
   
   .offer-image {
@@ -73,22 +74,25 @@ body{
   }
   
   .indicator-1 {
-    right: 654px;
+    right: 650px;
     bottom: 187px;
   }
   
   .indicator-2 {
-    right: 693px;
+  
+    right: 715px;
     bottom: 187px;
   }
   
   .indicator-3 {
-    left: 691px;
+  
+    left: 715px;
     bottom: 187px;
   }
   
   .indicator-4 {
-    left: 652px;
+
+    left: 650px;
     bottom: 187px;
   }
   
@@ -201,7 +205,7 @@ body{
     height: 50px;
     object-position: center;
     align-items: center;*/
-    left: 8px;
+    left: 1px;
     width: 100%;
     height: 6%;
     top: 0;
@@ -216,7 +220,7 @@ body{
     min-width: 240px;
     /*width: 1465px;
     height: 51px;*/
-    left: 8px;
+    left: 1px;
     width: 100%;
     height: 6%;
     top: 100px;
@@ -230,8 +234,7 @@ body{
     height: 30px;
     top: 60px;
     justify-content: center;
-
-    transform: translateX(115%);
+    transform: translateX(110%);
     /*left:460px;*/
     padding: 5px; /* Agrega padding para asegurar que el texto no toque los bordes */
   }
@@ -242,7 +245,6 @@ body{
     position: absolute;
     z-index: 0;
     display: flex;
-
     width: 100%;
     height: 100%;
     top: 0;
@@ -312,6 +314,7 @@ body{
     min-width: 240px;
    width: 100%;
    height: 25%;
+   left: -1px;
   margin-bottom: 10px;
     padding: 0 11px;
     font: 400 10px Inter, sans-serif;
@@ -394,6 +397,7 @@ body{
 	display: block;
 	font: bold 12px/20px sans-serif;
 	padding: 10px 25px;
+  border-radius: 10px;
 	text-align: center;
   align-items: center;
 	text-decoration: none;
