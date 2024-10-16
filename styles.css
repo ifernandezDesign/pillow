@@ -1,5 +1,6 @@
 body{
-    width: 100%;
+  margin: 0;
+    width: 99%;
     height: 100%;
 }
 .installment-offer {
@@ -9,40 +10,44 @@ body{
     padding: 0 1px;
     font: 700 70px Inria Serif, sans-serif;
   }
-  
   .offer-container {
     border-radius: 30px;
     /*background-color: #5e5e5e;
         align-items: start;
     gap: 10px;
     overflow: hidden;
-    justify-content: start;*/
+    justify-content: start;
+        left: -7px;*/
     position: relative;
     display: flex;
     min-height: 965px;
-    left: -7px;
+
   }
-  
   .offer-image {
-    aspect-ratio: 2.2;
+    /*aspect-ratio: 2.2;
+    width: 1437px;
+    height: 653px;
+    left: 0;
+    object-fit: contain;*/
     object-fit: contain;
     object-position: center;
-    width: 1437px;
     position: absolute;
     z-index: 0;
     min-width: 240px;
-    left: 0;
     top: 154px;
-    height: 653px;
   }
+  /*label{cursor: pointer;}*/
   
   .image-overlay {
-    position: absolute;
     z-index: 0;
     display: flex;
     min-width: 240px;
     width: 100%;
     height: 100%;
+    /*position: absolute;
+    background-size: cover;*/
+    overflow-y: hidden;
+    transition: all .5s ease;
   }
   
   .offer-text {
@@ -50,7 +55,7 @@ body{
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
     position: absolute;
     z-index: 0;
-    left: 73px;
+    left: 70px;
     top: 261px;
     /*width: 425px;
     height: 423px;*/
@@ -85,13 +90,11 @@ body{
   }
   
   .indicator-3 {
-  
     left: 715px;
     bottom: 187px;
   }
   
   .indicator-4 {
-
     left: 650px;
     bottom: 187px;
   }
@@ -105,18 +108,6 @@ body{
     background-color: #e3e3e3;
   }
   
-  .navigation-button-right {
-    border-radius: 5px 0 0 5px;
-    right: 1px;
-    top: 456px;
-  }
-  
-  .navigation-button-left {
-    border-radius: 0 5px 5px 0;
-    left: -1px;
-    top: 455px;
-  }
-  
   .navigation-icon {
     aspect-ratio: 0.67;
     object-fit: contain;
@@ -127,14 +118,24 @@ body{
     z-index: 0;
     height: 30px;
   }
-  
+  .navigation-button-right {
+    border-radius: 5px 0 0 5px;
+    right: 10px;
+    top: 456px;
+  }
   .navigation-icon-right {
-    right: 11px;
+    right: 20px;
     top: 466px;
   }
-  
+
+  .navigation-button-left {
+    border-radius: 0 5px 5px 0;
+    /*left: -1px;*/
+    left:10px;
+    top: 455px;
+  }
   .navigation-icon-left {
-    left: 9px;
+    left: 20px;
     top: 465px;
   }
   
@@ -204,9 +205,10 @@ body{
     /*width: 1485px;
     height: 50px;
     object-position: center;
-    align-items: center;*/
-    left: 1px;
-    width: 100%;
+    align-items: center;
+        left: 1px;*/
+        left: 1px;
+    width: 99%;
     height: 6%;
     top: 0;
   }
@@ -219,9 +221,10 @@ body{
     display: flex;
     min-width: 240px;
     /*width: 1465px;
-    height: 51px;*/
+    height: 51px;
+    left: 1px;*/
     left: 1px;
-    width: 100%;
+    width: 99%;
     height: 6%;
     top: 100px;
   }
@@ -312,11 +315,11 @@ body{
     z-index: 0;
     display: flex;
     min-width: 240px;
-   width: 100%;
-   height: 25%;
-   left: -1px;
-  margin-bottom: 10px;
-    padding: 0 11px;
+    width: 99%;
+    height: 25%;
+    /*padding: 0 11px;
+    left: -1px;
+    margin-bottom: 10px;*/
     font: 400 10px Inter, sans-serif;
   }
   .footer-heading {
