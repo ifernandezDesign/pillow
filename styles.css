@@ -22,6 +22,10 @@ body{
     display: flex;
     min-height: 965px;
 
+    width:100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
   }
   .offer-image {
     /*aspect-ratio: 2.2;
@@ -35,19 +39,19 @@ body{
     top: 154px;
   }
   /*label{cursor: pointer;}*/
-  
   .image-overlay {
     z-index: 0;
     display: flex;
     min-width: 240px;
     width: 100%;
     height: 100%;
-    /*position: absolute;
-    background-size: cover;*/
+    position: absolute;
+    background-size: cover;
     overflow-y: hidden;
     transition: all .5s ease;
   }
-  
+
+
   .offer-text {
     background-blend-mode: normal;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
@@ -58,7 +62,6 @@ body{
     /*width: 425px;
     height: 423px;*/
   }
-  
   .indicator {
     border-radius: 50%;
     position: absolute;
@@ -67,36 +70,29 @@ body{
     width: 15px;
     height: 15px;
   }
-  
   .indicator-active {
-    background-color: #fff;
+    /*background-color: #fff;*/
   }
-  
   .indicator-inactive {
-    background-color: #525252;
+    /*background-color: #525252;*/
   }
-  
   .indicator-1 {
     right: 650px;
     bottom: 187px;
   }
-  
   .indicator-2 {
   
     right: 710px;
     bottom: 187px;
   }
-  
   .indicator-3 {
     left: 710px;
     bottom: 187px;
   }
-  
   .indicator-4 {
     left: 650px;
     bottom: 187px;
   }
-  
   .navigation-button {
     position: absolute;
     z-index: 0;
@@ -105,7 +101,6 @@ body{
     height: 50px;
     background-color: #e3e3e3;
   }
-  
   .navigation-icon {
     aspect-ratio: 0.67;
     object-fit: contain;
@@ -113,7 +108,7 @@ body{
     width: 20px;
     background-blend-mode: overlay;
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     height: 30px;
   }
   .navigation-button-right {
@@ -437,3 +432,86 @@ li:hover ul#submenu {
 #submenu a {
 	background-color:#000000;
 }
+/****************************************************************************/
+.ContainerCenter{
+  width:100%;
+  height: 100%;
+  display: flex;
+ /*margin-left: -5%;*/
+  align-items: center;
+  position:relative;
+  flex-direction: row;
+}
+/* Slider */
+.Carrusels{
+  position: relative;
+  overflow-x: hidden;
+}
+.tam{
+  height: 400px;
+  width: 700px;
+  margin-left: 10%;
+}
+.Carrusel{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  overflow-y: hidden;
+  transition: all .5s ease;
+}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(0%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(200%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(300%, 0);}
+
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-100%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(0%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(100%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(200%, 0);}
+
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-300%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(-200%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(0%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(100%, 0);}
+
+#Slider4:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-300%, 0);}
+#Slider4:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(-200%, 0);}
+#Slider4:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(100%, 0);}
+#Slider4:checked ~ .Carrusels .Carrusel:nth-of-type(4) {transform: translate(0%, 0);}
+/* Flechas */
+.Carrusels .ArrowLeft, .Carrusels .ArrowRight{
+  position: absolute;
+  height: 100%;
+  width: 2em;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  user-select: none;
+}
+.Carrusels .ArrowLeft{left: 0px;}
+.Carrusels .ArrowRight{right: 0px;}
+/* Configuracion de flechas individuales */
+#Slider1:checked ~ .Carrusels .Arrow1{display: flex;}
+#Slider2:checked ~ .Carrusels .Arrow2{display: flex;}
+#Slider3:checked ~ .Carrusels .Arrow3{display: flex;}
+#Slider4:checked ~ .Carrusels .Arrow4{display: flex;}
+/* Selectores */
+.Selectors {
+  width: 60px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.Selectors .Selector {
+  background-color: #FFF;
+  height: 10px;
+  width: 10px;
+  display: block;
+  border-radius: 5px;
+}
+/* Condicionales para botón inferior */
+#Slider1:checked ~ .Selectors .Selector:nth-of-type(1) {background-color: #999999;}
+#Slider2:checked ~ .Selectors .Selector:nth-of-type(2) {background-color: #999999;}
+#Slider3:checked ~ .Selectors .Selector:nth-of-type(3) {background-color: #999999;}
+#Slider4:checked ~ .Selectors .Selector:nth-of-type(4) {background-color: #999999;}
