@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PILLOW</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
         <section class="installment-offer pillow-section">
@@ -38,10 +41,11 @@
         </section>
 
         <div class="offer-container ContainerCenter">
-          <span class="indicator indicator-inactive indicator-1" aria-hidden="true"><input type="radio" name="Carrusel" id="Slider1" checked></span>
-          <span class="indicator indicator-inactive indicator-2" aria-hidden="true"><input type="radio" name="Carrusel" id="Slider2"></span>
-          <span class="indicator indicator-inactive indicator-3" aria-hidden="true"><input type="radio" name="Carrusel" id="Slider3"></span>
-          <span class="indicator indicator-active indicator-4" aria-hidden="true"><input type="radio" name="Carrusel" id="Slider4"></span>
+
+          <input class="indicator-1 indicator" type="radio" name="Carrusel" id="Slider1" checked>
+          <input class="indicator-2 indicator" type="radio" name="Carrusel" id="Slider2">
+          <input class="indicator-3 indicator" type="radio" name="Carrusel" id="Slider3">
+      <input class="indicator-4 indicator" type="radio" name="Carrusel" id="Slider4">
       
           <div class="image-overlay Carrusels tam">
             <!-- Imagen contenido -->
@@ -51,18 +55,16 @@
             <div class="Carrusel" style="background-image: url(fotos/cama4.jpg);"></div> 
       
       <!-- Flechas a la izquierda por cada imagen -->
-      <label for="Slider4" class="ArrowLeft Arrow1" style="font-size: 150%;"><button class="navigation-button navigation-button-right" aria-label="Next offer"></button>          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-right" alt="" /></label>
-      <label for="Slider1" class="ArrowLeft Arrow2" style="font-size: 150%;"><button class="navigation-button navigation-button-right" aria-label="Next offer"></button>          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-right" alt="" /></label>
-      <label for="Slider2" class="ArrowLeft Arrow3" style="font-size: 150%;"><button class="navigation-button navigation-button-right" aria-label="Next offer"></button>          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-right" alt="" /></label>
-      <label for="Slider3" class="ArrowLeft Arrow4" style="font-size: 150%;"><button class="navigation-button navigation-button-right" aria-label="Next offer"></button>          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-right" alt="" /></label>
+      <label for="Slider4" class="ArrowLeft Arrow1"><button class="navigation-button navigation-button-left" aria-label="Next offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-left" alt="" /></label>
+      <label for="Slider1" class="ArrowLeft Arrow2"><button class="navigation-button navigation-button-left" aria-label="Next offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-left" alt="" /></label>
+      <label for="Slider2" class="ArrowLeft Arrow3"><button class="navigation-button navigation-button-left" aria-label="Next offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-left" alt="" /></label>
+      <label for="Slider3" class="ArrowLeft Arrow4"><button class="navigation-button navigation-button-left" aria-label="Next offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-left" alt="" /></label>
       <!-- Flechas a la derecha por cada imagen -->
-      <label for="Slider2" class="ArrowRight Arrow1" style="font-size: 150%;"><button class="navigation-button navigation-button-left" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-left" alt="" /></label> 
-      <label for="Slider3" class="ArrowRight Arrow2" style="font-size: 150%;"><button class="navigation-button navigation-button-left" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-left" alt="" /></label>
-      <label for="Slider4" class="ArrowRight Arrow3" style="font-size: 150%;"><button class="navigation-button navigation-button-left" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-left" alt="" /></label>
-      <label for="Slider1" class="ArrowRight Arrow4" style="font-size: 150%;"><button class="navigation-button navigation-button-left" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-left" alt="" /></label> 
+      <label for="Slider2" class="ArrowRight Arrow1"><button class="navigation-button navigation-button-right" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-right" alt="" /></label> 
+      <label for="Slider3" class="ArrowRight Arrow2"><button class="navigation-button navigation-button-right" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-right" alt="" /></label>
+      <label for="Slider4" class="ArrowRight Arrow3"><button class="navigation-button navigation-button-right" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-right" alt="" /></label>
+      <label for="Slider1" class="ArrowRight Arrow4"><button class="navigation-button navigation-button-right" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="navigation-icon navigation-icon-right" alt="" /></label> 
                  
-                <!--button class="navigation-button navigation-button-right" aria-label="Next offer"></button>
-                <button class="navigation-button navigation-button-left" aria-label="Previous offer"></button-->
               </div>
               </div>
 
@@ -92,7 +94,7 @@
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a0025e4e29ccdd58c4453836801c68bd66c436af75808681c6ab9fa0ca1d79ab?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Social media icon" class="social-icon" style="width: 50px; right: 193px; bottom: 61px; height: 50px;" />
         </footer>
 
-        <script>
+        <!--script>
           const images = document.querySelectorAll('.offer-image');
           let currentIndex = 0;
           document.querySelector('.navigation-button-right').addEventListener('click', () => {
@@ -109,7 +111,7 @@
           images.forEach((img, index) => {
             if (index !== 0) img.style.display = 'none';
           });
-          </script>
+          </script-->
           
 </body>
 </html>
