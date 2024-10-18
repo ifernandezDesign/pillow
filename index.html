@@ -94,24 +94,17 @@
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a0025e4e29ccdd58c4453836801c68bd66c436af75808681c6ab9fa0ca1d79ab?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Social media icon" class="social-icon" style="width: 50px; right: 193px; bottom: 61px; height: 50px;" />
         </footer>
 
-        <!--script>
-          const images = document.querySelectorAll('.offer-image');
-          let currentIndex = 0;
-          document.querySelector('.navigation-button-right').addEventListener('click', () => {
-            images[currentIndex].style.display = 'none';
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].style.display = 'block';
-          });
-          document.querySelector('.navigation-button-left').addEventListener('click', () => {
-            images[currentIndex].style.display = 'none';
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            images[currentIndex].style.display = 'block';
-          });
-          // Oculta todas las imágenes excepto la primera
-          images.forEach((img, index) => {
-            if (index !== 0) img.style.display = 'none';
-          });
-          </script-->
-          
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const radios = document.querySelectorAll('input[name="Carrusel"]');
+  let currentIndex = 0;
+
+  function autoSlide() {
+    radios[currentIndex].checked = true;
+    currentIndex = (currentIndex + 1) % radios.length;
+  }
+  setInterval(autoSlide, 3000); // Cambia de imagen cada 3 segundos (3000 ms)
+});
+</script>  
 </body>
 </html>
