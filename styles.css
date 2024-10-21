@@ -191,7 +191,7 @@ body{
     height: 30px;
     top: 60px;
     justify-content: center;
-    transform: translateX(110%);
+    transform: translateX(100%);
     padding: 5px; /* Agrega padding para asegurar que el texto no toque los bordes */
     z-index: 2;
   }
@@ -231,7 +231,7 @@ body{
     flex-direction: column;
     border-radius: 10px;
     position: absolute;
-    background-color: #303775;
+    background: linear-gradient(125deg, #E0E0E0, #493B21, #E0E0E0);
     z-index: -1;
     display: flex;
     width: 80px;
@@ -345,7 +345,7 @@ body{
     border-radius: 10px;*/
 	color: #000000;
 	display: block;
-	font: bold 12px/20px sans-serif;
+	font: bold 14px/20px sans-serif;
 	padding: 10px 25px;
 	text-align: center;
   align-items: center;
@@ -503,5 +503,5 @@ li:hover ul#submenu {
   background: linear-gradient(135deg, #5AC4DB, #8ED5DE, #307575);
 }
 .color2{
-  background: linear-gradient(135deg, #493B21, #AF8E50);
+  background: linear-gradient(135deg, #5E5E5E, #493B21);
 }
