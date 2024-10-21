@@ -232,6 +232,7 @@ body{
     border-radius: 10px;
     position: absolute;
     background: linear-gradient(125deg, #E0E0E0, #493B21, #E0E0E0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     z-index: -1;
     display: flex;
     width: 80px;
@@ -314,13 +315,15 @@ body{
   @media (max-width: 991px) {
     .top-bar,
     .nav-bar,
-    .sub-nav,
     .footer {
       max-width: 100%;
     }
     .promo-text {
       max-width: 100%;
     }
+.sub-nav { max-width: 100%; white-space: initial; 
+  transform: translateX(0%);
+} 
   }
   /**********************************************************/
   .dropdownmenu ul, .dropdownmenu li {
@@ -341,14 +344,13 @@ body{
 	width:auto;
 }
 .dropdownmenu a {
-	/*background: #30A6E6;
-    border-radius: 10px;*/
+    justify-content: center;
+    align-items: center;
 	color: #000000;
 	display: block;
 	font: bold 14px/20px sans-serif;
 	padding: 10px 25px;
 	text-align: center;
-  align-items: center;
 	text-decoration: none;
 	-webkit-transition: all .25s ease;
 	-moz-transition: all .25s ease;
@@ -495,7 +497,6 @@ li:hover ul#submenu {
 }
 .purchase-button-text {
   border-radius: 20px;
-
   width: 100%;
   padding: 18px 80px;
 }
