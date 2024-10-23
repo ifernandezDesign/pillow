@@ -144,7 +144,8 @@ body{
     font-weight: 400; 
     white-space: nowrap; 
     flex-wrap: wrap; 
-    justify-content: space-between; 
+    justify-content: center; /* Cambiar esto a center para centrar el contenido */
+  align-items: center; /* Asegura que los elementos estén centrados verticalmente */
   }
   .nav-item {
     text-decoration: none;
@@ -191,9 +192,10 @@ body{
     height: 30px;
     top: 60px;
     justify-content: center;
-    transform: translateX(100%);
+    /*transform: translateX(100%);
+    position: absolute;*/
     padding: 5px; /* Agrega padding para asegurar que el texto no toque los bordes */
-    z-index: 2;
+    z-index: 2; 
   }
   .promo-text {
     color: #fff;
@@ -213,18 +215,26 @@ body{
     box-sizing: border-box; /* Incluye el padding dentro del tamaño del elemento */
 }
   .slogan {
-    color: #fff;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-    font-size: 15px;
+    /*transform: translateY(16%);
+    left: -10px;*/
     position: absolute;
     z-index: 1;
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateY(-36%);
+    color: #fff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     left: -10px;
+    top: -278px;
+  }
+  .slogan::before {
+    font-size: 18px;
+    content: 'Las mejores almohadas de la region'; /* El texto que deseas insertar */
+    color: #ffffff; /* Color del texto */
+    text-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
   }
   .logo-container {
     display: flex;
@@ -237,7 +247,6 @@ body{
     display: flex;
     width: 80px;
     height: 34px;
-    content: 'PILLOW';
     /*left: 17px;*/
     top: 60px;
   }
@@ -321,8 +330,10 @@ body{
     .promo-text {
       max-width: 100%;
     }
-.sub-nav { max-width: 100%; white-space: initial; 
-  transform: translateX(0%);
+.sub-nav { 
+  
+  /*max-width: 100%; white-space: initial; 
+  transform: translateX(0%);*/
 } 
   }
   /**********************************************************/
@@ -344,8 +355,8 @@ body{
 	width:auto;
 }
 .dropdownmenu a {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 	color: #000000;
 	display: block;
 	font: bold 14px/20px sans-serif;
@@ -499,6 +510,7 @@ li:hover ul#submenu {
   border-radius: 20px;
   width: 100%;
   padding: 18px 80px;
+  color: #EBEBEB;
 }
 .color1{
   background: linear-gradient(135deg, #5AC4DB, #8ED5DE, #307575);
