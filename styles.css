@@ -176,21 +176,18 @@ body{
     z-index: 1;
     display: flex;
     min-width: 240px;
-    /*width: 1465px;
-    height: 51px;
-    left: 1px;*/
     left: 1px;
     width: 100%;
     height: 6%;
     top: 100px;
   }
   .sub-nav {
-    background-color: #fff;
+    /*background-color: #fff;*/
     position: absolute;
     display: flex;
     min-width: 240px;
     height: 30px;
-    top: 60px;
+    top: 55px;
     justify-content: center;
     /*transform: translateX(100%);
     position: absolute;*/
@@ -214,25 +211,25 @@ body{
     padding: 10px; /* Agrega padding para asegurar que el texto no toque los bordes */
     box-sizing: border-box; /* Incluye el padding dentro del tamaño del elemento */
 }
-  .slogan {
-    /*transform: translateY(16%);
-    left: -10px;*/
-    position: absolute;
+  .slogan {    
     z-index: 1;
     width: 100%;
     height: 100%;
+
+    position: absolute;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+
     color: #fff;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-    left: -10px;
-    top: -278px;
+    /*left: -10px;
+    top: -280px;*/
+    top: 1px;
   }
   .slogan::before {
     font-size: 18px;
-    content: 'Las mejores almohadas de la region'; /* El texto que deseas insertar */
+    content: 'Las mejores almohadas de la región '; /* El texto que deseas insertar */
     color: #ffffff; /* Color del texto */
     text-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
   }
@@ -301,13 +298,13 @@ body{
   }
   .search-icon {
     aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
+
     width: 20px;
-    position: absolute;
+
     z-index: 1;
-    right: 602px;
-    top: 117px;
+    /*right: 602px;
+    top: 117px;*/
+    /*right: 450px;*/
     height: 20px;
   }
   .visually-hidden {
@@ -355,13 +352,21 @@ body{
 	width:auto;
 }
 .dropdownmenu a {
+	color: #000000;
+
+  display: block;
   justify-content: center;
   align-items: center;
-	color: #000000;
-	display: block;
+	text-align: center;
+
+ 
+  /*display: flex;
+   position: absolute;*/
+  flex-direction: column;
+
+
 	font: bold 14px/20px sans-serif;
 	padding: 10px 25px;
-	text-align: center;
 	text-decoration: none;
 	-webkit-transition: all .25s ease;
 	-moz-transition: all .25s ease;
