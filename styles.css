@@ -60,15 +60,16 @@ body{
     height: 15px;
   }
   .indicator-1 {
+    object-position: center;
     right: 650px;
     bottom: 187px;
   }
   .indicator-2 {
-    right: 710px;
+    right: 715px;
     bottom: 187px;
   }
   .indicator-3 {
-    left: 710px;
+    left: 715px;
     bottom: 187px;
   }
   .indicator-4 {
@@ -182,17 +183,23 @@ body{
     top: 100px;
   }
   .sub-nav {
-    /*background-color: #fff;*/
     position: absolute;
-    display: flex;
+ 
     min-width: 240px;
     height: 30px;
-    top: 55px;
-    justify-content: center;
-    /*transform: translateX(100%);
-    position: absolute;*/
-    padding: 5px; /* Agrega padding para asegurar que el texto no toque los bordes */
+    top: 45px;
+    right: 50px;
+    left: 50px;
     z-index: 2; 
+
+    margin: 0 auto;
+    display: flex; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    padding: 20px 30px; 
+
+    justify-content: center;
+    align-items: center;
   }
   .promo-text {
     color: #fff;
@@ -223,8 +230,6 @@ body{
 
     color: #fff;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-    /*left: -10px;
-    top: -280px;*/
     top: 1px;
   }
   .slogan::before {
@@ -244,8 +249,7 @@ body{
     display: flex;
     width: 80px;
     height: 34px;
-    /*left: 17px;*/
-    top: 60px;
+    top: 55px;
   }
   .logo-text {
     color: #fff;
@@ -298,13 +302,8 @@ body{
   }
   .search-icon {
     aspect-ratio: 1;
-
     width: 20px;
-
     z-index: 1;
-    /*right: 602px;
-    top: 117px;*/
-    /*right: 450px;*/
     height: 20px;
   }
   .visually-hidden {
@@ -337,14 +336,16 @@ body{
   .dropdownmenu ul, .dropdownmenu li {
 	padding: 0;
 }
-
 .dropdownmenu ul {
   flex-direction: row;
   display: flex;
-  transform: translateY(-50%);
+  /*transform: translateY(-50%);
   text-align: center;
-  align-items: center;
+  align-items: center;*/
 	list-style: none;
+  float: center;
+	position: relative;
+    transform: translateY(-50%);
 }
 .dropdownmenu li {
 	float: center;
@@ -353,17 +354,7 @@ body{
 }
 .dropdownmenu a {
 	color: #000000;
-
   display: block;
-  justify-content: center;
-  align-items: center;
-	text-align: center;
-
- 
-  /*display: flex;
-   position: absolute;*/
-  flex-direction: column;
-
 
 	font: bold 14px/20px sans-serif;
 	padding: 10px 25px;
