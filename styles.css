@@ -42,6 +42,7 @@ body{
     transition: all .5s ease;
   }
   .offer-text {
+    font: 700 70px Inria Serif, sans-serif;
     font-size: 60px;
     background-blend-mode: normal;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
@@ -506,7 +507,7 @@ li:hover ul#submenu {
   color: #EBEBEB;
 }
 .color1{
-  background: linear-gradient(135deg, #5AC4DB, #8ED5DE, #307575);
+  background: linear-gradient(135deg, #5D5ADB, #8E91DE, #303775);
 }
 .color2{
   background: linear-gradient(135deg, #5E5E5E, #493B21);
