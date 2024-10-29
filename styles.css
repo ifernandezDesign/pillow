@@ -174,23 +174,22 @@ body{
     background-color: #303775;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
-    z-index: 1;
+
     display: flex;
     min-width: 240px;
-    left: 1px;
+    left: 0;
     width: 100%;
-    height: 6%;
+    height: 100%;
     top: 100px;
   }
   .sub-nav {
     position: absolute;
- 
+
     min-width: 240px;
     height: 30px;
     top: 45px;
     right: 50px;
     left: 50px;
-    z-index: 2; 
 
     margin: 0 auto;
     display: flex; 
@@ -219,7 +218,6 @@ body{
     box-sizing: border-box; /* Incluye el padding dentro del tamaño del elemento */
 }
   .slogan {    
-    z-index: 1;
     width: 100%;
     height: 100%;
 
@@ -250,6 +248,7 @@ body{
     width: 80px;
     height: 34px;
     top: 55px;
+    left: 0;
   }
   .logo-text {
     color: #fff;
@@ -276,7 +275,7 @@ body{
     display: flex;
     min-width: 240px;
     width: 100%;
-    height: 30%;
+    height: 28%;
     font: 400 10px Inter, sans-serif;
   }
   .footer-heading {
@@ -303,7 +302,6 @@ body{
   .search-icon {
     aspect-ratio: 1;
     width: 20px;
-    z-index: 1;
     height: 20px;
   }
   .visually-hidden {
