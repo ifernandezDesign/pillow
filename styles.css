@@ -96,6 +96,7 @@ body{
     height: 30px;
   }
   .navigation-button-right {
+    border: #e3e3e3;
     border-radius: 5px 0 0 5px;
     right: 0.5px;
     top: 456px;
@@ -109,6 +110,7 @@ body{
     top: 465px;
   }
   .navigation-button-left {
+    border: #e3e3e3;
     border-radius: 0 5px 5px 0;
     left:0.1px;
     top: 455px;
@@ -505,6 +507,8 @@ li:hover ul#submenu {
   width: 100%;
   padding: 18px 80px;
   color: #EBEBEB;
+  font: 700 20px Inria Serif, sans-serif;
+  justify-items: center;
 }
 .color1{
   background: linear-gradient(135deg, #5D5ADB, #8E91DE, #303775);
