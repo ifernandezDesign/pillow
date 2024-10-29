@@ -11,7 +11,7 @@ body{
   z-index: 0;
   min-width: 240px;
   left: 243px;
-  top: 241px;
+  top: 1241px;
   width: 260px;
   height: 170px;
 }
@@ -24,7 +24,7 @@ body{
   z-index: 0;
   min-width: 240px;
   left: 243px;
-  bottom: 195px;
+  top: 1420px;
   height: 170px;
 }
 .featured-image3 {
@@ -37,7 +37,7 @@ body{
   z-index: 0;
   min-width: 240px;
   right: 238px;
-  top: 241px;
+  top: 1241px;
   height: 350px;
 }
 .featured-image4 {
@@ -50,7 +50,7 @@ body{
     z-index: 0;
     min-width: 240px;
     left: 550px;
-    top: 241px;
+    top: 1241px;
     height: 350px;
 }
 .installment-offer {
