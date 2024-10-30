@@ -111,19 +111,19 @@ body{
     height: 15px;
   }
   .indicator-1 {
-    right: 635px;
+    margin-left: 620px;
     bottom: 187px;
   }
   .indicator-2 {
-    right: 710px;
+    margin-left: 700px;
     bottom: 187px;
   }
   .indicator-3 {
-    left: 710px;
+    margin-left: 780px;
     bottom: 187px;
   }
   .indicator-4 {
-   left: 635px;   
+    margin-left: 860px;
    bottom: 187px;
   }
   .navigation-button {
