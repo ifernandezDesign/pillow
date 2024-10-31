@@ -1,7 +1,103 @@
 body{
-  margin: 0;
+    margin: 0;
     width: 100%;
     height: 100%;
+}
+.discount-container {
+  border-radius: 6px;
+  display: flex;
+  max-width: 652px;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.discount-tag {
+  border-radius: 6px;
+  background-color: #573075;
+  padding: 3px 30px 11px;
+  color: #fff;
+  font: 700 12px Inria Serif, sans-serif;
+}
+.discount-tag-center {/*ALMOHADAS*/
+  margin-top: 44%;
+  margin-left:38%;
+  z-index: 2;
+}
+.discount-tag-center::before{/*ALMOHADAS*/
+  content: '10% Off';
+}
+.discount-tag2 {/*SABANAS*/
+  margin-top: 71%;
+  margin-left:-18%;
+  z-index: 2;
+}
+.discount-tag2::before{/*SABANAS*/
+  content: '10% Off';
+}
+.discount-tag-offset {/*BASES*/
+  margin-top: 44%;
+  margin-left:34%;
+  z-index: 2;
+}
+.discount-tag-offset::before{/*BASES*/
+  content: '10% Off';
+}
+.discount-banner {/*COLCHONES*/
+  margin-top: 44%;
+  margin-left:35%;
+  z-index: 2;
+}
+.discount-banner::before{/*COLCHONES*/
+  content: '10% Off';
+}
+.product-section {
+  margin-top: 3%;
+  margin-left:38%;
+  z-index: 2;
+ /* display: flex;
+  margin-top: 101px;
+  width: 100px;
+  max-width: 100%;
+  flex-direction: column;*/
+}
+.product-name {
+  z-index: 2;
+  color: #7c4949;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  font: 400 20px "IM FELL French Canon", -apple-system, Roboto, Helvetica, sans-serif;
+}
+.product-name-offset {
+  align-self: flex-end;
+  z-index: 2;
+  color: rgba(124, 73, 73, 0.7);
+}
+.product-list {
+  align-self: flex-end;
+  z-index: 10;
+  display: flex;
+  width: 351px;
+  max-width: 100%;
+  flex-direction: column;
+  white-space: nowrap;
+  margin: -23px 30px 0 0;
+  font: 400 20px "IM FELL French Canon", -apple-system, Roboto, Helvetica, sans-serif;
+}
+/*.product-name-faded {
+  
+}*/
+@media (max-width: 991px) {
+  .discount-tag {
+    padding: 0 20px;
+  }
+  .product-section {
+    margin-top: 40px;
+  }
+  .product-name-sabanas {
+    margin: 40px 0 0 2px;
+  }
+  .product-list {
+    margin-right: 10px;
+    white-space: initial;
+  }
 }
 .featured-image {
   aspect-ratio: 1.53;
@@ -234,7 +330,7 @@ body{
   }
   .sub-nav {
     position: absolute;
-
+    z-index: 2;
     min-width: 240px;
     height: 30px;
     top: 45px;
@@ -393,7 +489,7 @@ body{
 	list-style: none;
   float: center;
 	position: relative;
-    transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .dropdownmenu li {
 	float: center;
