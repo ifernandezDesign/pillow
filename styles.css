@@ -3,6 +3,17 @@ body{
     width: 100%;
     height: 100%;
 }
+.improve-rest-title {
+  background-blend-mode: normal;
+  color: #6c6c6c;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  max-width: 512px;
+  font: 700 30px 'Inria Serif', serif;
+  text-align: center;
+  margin-left: 34%;
+  margin-right: 34%;
+margin-top: 10%;
+}
 .discount-container {
   border-radius: 6px;
   display: flex;
@@ -13,12 +24,12 @@ body{
 .discount-tag {
   border-radius: 6px;
   background-color: #573075;
-  padding: 3px 30px 11px;
+  padding: 1px 30px 1px;
   color: #fff;
   font: 700 12px Inria Serif, sans-serif;
 }
 .discount-tag-center {/*ALMOHADAS*/
-  margin-top: 44%;
+  margin-top: 14%;
   margin-left:38%;
   z-index: 2;
 }
@@ -26,7 +37,7 @@ body{
   content: '10% Off';
 }
 .discount-tag2 {/*SABANAS*/
-  margin-top: 71%;
+  margin-top: 41%;
   margin-left:-18%;
   z-index: 2;
 }
@@ -34,7 +45,7 @@ body{
   content: '10% Off';
 }
 .discount-tag-offset {/*BASES*/
-  margin-top: 44%;
+  margin-top: 14%;
   margin-left:34%;
   z-index: 2;
 }
@@ -42,7 +53,7 @@ body{
   content: '10% Off';
 }
 .discount-banner {/*COLCHONES*/
-  margin-top: 44%;
+  margin-top: 14%;
   margin-left:35%;
   z-index: 2;
 }
@@ -650,9 +661,9 @@ li:hover ul#submenu {
   border-radius: 20px;
   width: 100%;
   padding: 18px 80px;
+  justify-items: center;
   color: #EBEBEB;
   font: 700 20px Inria Serif, sans-serif;
-  justify-items: center;
 }
 .color1{
   background: linear-gradient(135deg, #5D5ADB, #8E91DE, #303775);
