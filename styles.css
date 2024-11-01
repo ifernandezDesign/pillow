@@ -3,10 +3,6 @@ body{
     width: 100%;
     height: 100%;
 }
-.resp{
-  width: 100%;
-  height: 100%;
-}
 .accessories-container {
   border-radius: 20px;
   display: flex;
@@ -161,9 +157,9 @@ body{
       .product-name-4 {
         margin-top: 300px;
       }
-      .discount-badge-4 {
+      /*.discount-badge-4 {
         margin-left: 13px;
-      }
+      }*/
       .product-name-4 {
         color: rgba(124, 73, 73, 0.7);
       }
@@ -445,17 +441,13 @@ transform: translateX(0%);*/
 @media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
 
 }
-@media (max-width:1280px) {
+@media (max-width:1280px) {/*monitor LG oficina*/
   .product-name-3 {
     margin-top: 310px;
   }
       .product-name-4 {
         margin-top: 325px;
       }
-  .resp{
-    width: 50%;
-    height: 50%;
-  }
 } 
 @media only screen and (min-width: 1300px) {
 
