@@ -3,16 +3,75 @@ body{
     width: 100%;
     height: 100%;
 }
+.resp{
+  width: 100%;
+  height: 100%;
+}
+.accessories-container {
+  border-radius: 20px;
+  display: flex;
+  max-width: 957px;
+  margin-left: 20%;
+  margin-right: 20%;
+  flex-direction: column;
+}
+.section-title {
+  color: #6c6c6c;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  align-self: flex-end;
+  /*margin-right: 121px;*/
+  font: 700 30px 'Inria Serif', serif;
+
+  text-align: center;
+  margin-left: 34%;
+  margin-right: 34%;
+}
+.product-grid {
+  margin-top: 28px;
+  width: 100%;
+  gap: 20px;
+  display: flex;
+}
+.product-card {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'IM FELL French Canon', serif;
+  color: #000;
+  font-weight: 400;
+}
+.product-image {
+  aspect-ratio: 1.31;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 20px;
+  align-self: stretch;
+}
+.product-name {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+.product-price {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  margin-top: 10px;
+}
 .improve-rest-title {
   background-blend-mode: normal;
   color: #6c6c6c;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   max-width: 512px;
   font: 700 30px 'Inria Serif', serif;
+
   text-align: center;
   margin-left: 34%;
   margin-right: 34%;
-margin-top: 10%;
+
+  margin-top: 10%;
 }
 .discount-container {
   border-radius: 6px;
@@ -28,9 +87,12 @@ margin-top: 10%;
   color: #fff;
   font: 700 12px Inria Serif, sans-serif;
 }
+.off{
+  margin-left: 40%;
+}
 .discount-tag-center {/*ALMOHADAS*/
   margin-top: 14%;
-  margin-left:38%;
+  /*margin-left:38%;*/
   z-index: 2;
 }
 .discount-tag-center::before{/*ALMOHADAS*/
@@ -38,7 +100,7 @@ margin-top: 10%;
 }
 .discount-tag2 {/*SABANAS*/
   margin-top: 41%;
-  margin-left:-18%;
+  margin-left:-16%;
   z-index: 2;
 }
 .discount-tag2::before{/*SABANAS*/
@@ -46,7 +108,7 @@ margin-top: 10%;
 }
 .discount-tag-offset {/*BASES*/
   margin-top: 14%;
-  margin-left:34%;
+  margin-left:36%;
   z-index: 2;
 }
 .discount-tag-offset::before{/*BASES*/
@@ -54,7 +116,7 @@ margin-top: 10%;
 }
 .discount-banner {/*COLCHONES*/
   margin-top: 14%;
-  margin-left:35%;
+  margin-left:37%;
   z-index: 2;
 }
 .discount-banner::before{/*COLCHONES*/
@@ -92,24 +154,7 @@ margin-top: 10%;
   margin: -23px 30px 0 0;
   font: 400 20px "IM FELL French Canon", -apple-system, Roboto, Helvetica, sans-serif;
 }
-/*.product-name-faded {
-  
-}*/
-@media (max-width: 991px) {
-  .discount-tag {
-    padding: 0 20px;
-  }
-  .product-section {
-    margin-top: 40px;
-  }
-  .product-name-sabanas {
-    margin: 40px 0 0 2px;
-  }
-  .product-list {
-    margin-right: 10px;
-    white-space: initial;
-  }
-}
+
 .featured-image {
   aspect-ratio: 1.53;
   object-fit: contain;
@@ -272,7 +317,50 @@ margin-top: 10%;
     left:0.1px;
     top: 455px;
   }
+  @media (max-width:1280px) {
+.resp{
+  width: 50%;
+  height: 50%;
+}
+  }
   @media (max-width: 991px) {
+    .section-title {
+      max-width: 100%;
+      margin-right: 10px;
+    }
+    .product-grid {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .product-card {
+      margin-top: 23px;
+    }
+    .top-bar,
+    .nav-bar,
+    .footer {
+      max-width: 100%;
+    }
+    .promo-text {
+      max-width: 100%;
+    }
+.sub-nav { 
+  /*max-width: 100%; white-space: initial; 
+  transform: translateX(0%);*/
+} 
+    .discount-tag {
+      padding: 0 20px;
+    }
+    .product-section {
+      margin-top: 40px;
+    }
+    .product-name-sabanas {
+      margin: 40px 0 0 2px;
+    }
+    .product-list {
+      margin-right: 10px;
+      white-space: initial;
+    }
     .installment-offer,
     .offer-container {
       font-size: 40px;
@@ -332,11 +420,12 @@ margin-top: 10%;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
 
+    z-index: 10;
     display: flex;
     min-width: 240px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 5%;
     top: 100px;
   }
   .sub-nav {
@@ -383,6 +472,7 @@ margin-top: 10%;
     flex-direction: row;
     justify-content: center;
 
+    z-index: 10;
     color: #fff;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     top: 1px;
@@ -432,7 +522,7 @@ margin-top: 10%;
     display: flex;
     min-width: 240px;
     width: 100%;
-    height: 25%;
+    height: 28%;
     font: 400 10px Inter, sans-serif;
   }
   .footer-heading {
@@ -471,21 +561,6 @@ margin-top: 10%;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-  }
-  @media (max-width: 991px) {
-    .top-bar,
-    .nav-bar,
-    .footer {
-      max-width: 100%;
-    }
-    .promo-text {
-      max-width: 100%;
-    }
-.sub-nav { 
-  
-  /*max-width: 100%; white-space: initial; 
-  transform: translateX(0%);*/
-} 
   }
   /**********************************************************/
   .dropdownmenu ul, .dropdownmenu li {
