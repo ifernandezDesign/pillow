@@ -73,55 +73,101 @@ body{
 
   margin-top: 10%;
 }
-.discount-container {
-  border-radius: 6px;
-  display: flex;
-  max-width: 652px;
-  flex-direction: row;
-  align-items: flex-start;
-}
-.discount-tag {
-  border-radius: 6px;
-  background-color: #573075;
-  padding: 1px 30px 1px;
-  color: #fff;
-  font: 700 12px Inria Serif, sans-serif;
-}
-.off{
-  margin-left: 40%;
-}
-.discount-tag-center {/*ALMOHADAS*/
-  margin-top: 14%;
-  /*margin-left:38%;*/
-  z-index: 2;
-}
-.discount-tag-center::before{/*ALMOHADAS*/
-  content: '10% Off';
-}
-.discount-tag2 {/*SABANAS*/
-  margin-top: 41%;
-  margin-left:-16%;
-  z-index: 2;
-}
-.discount-tag2::before{/*SABANAS*/
-  content: '10% Off';
-}
-.discount-tag-offset {/*BASES*/
-  margin-top: 14%;
-  margin-left:36%;
-  z-index: 2;
-}
-.discount-tag-offset::before{/*BASES*/
-  content: '10% Off';
-}
-.discount-banner {/*COLCHONES*/
-  margin-top: 14%;
-  margin-left:37%;
-  z-index: 2;
-}
-.discount-banner::before{/*COLCHONES*/
-  content: '10% Off';
-}
+/**/
+      .featured-products {/*editar para responsive*/
+        text-align: center;
+
+  margin-left: 22%;
+  margin-right: 22%;
+  
+        max-width: 957px;
+        border-radius: 0;
+      }
+      .product-grid2 {
+        display: flex;
+        gap: 20px;
+      }
+      .product-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+      }
+      .product-column-1 {
+        width: 28%;
+      }
+      .product-column-2 {
+        width: 27%;
+      }
+      .product-column-3 {
+        width: 45%;
+      }
+      .product-card2 {
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        position: relative;
+        width: 100%;
+        align-items: start;
+      }
+      .product-image2 {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: center;
+      }
+      .discount-badge {
+        position: relative;
+        border-radius: 6px;
+        background-color: rgba(87, 48, 117, 1);
+        color: #fff;
+        padding: 3px 30px 11px;
+        font: 700 12px Inria Serif, sans-serif;
+      }
+      .product-name2 {
+        position: relative;
+        color: rgba(124, 73, 73, 1);
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+        font: 400 20px 'IM FELL French Canon', -apple-system, Roboto, Helvetica, sans-serif;
+      }
+      .product-card-1 {
+        aspect-ratio: 1.529;
+        padding: 17px 52px 6px 23px;
+      }
+      .product-card-2 {
+        aspect-ratio: 1.529;
+        margin-top: 10px;
+        padding: 16px 52px 8px 23px;
+      }
+      .product-card-3 {
+        aspect-ratio: 0.706;
+        flex-grow: 1;
+        padding: 14px 49px 8px 16px;
+      }
+      .product-card-4 {
+        aspect-ratio: 1.183;
+        flex-grow: 1;
+        padding: 14px 80px 8px 19px;
+      }
+      .product-name-1 {
+        margin-top: 101px;
+      }
+      .product-name-2 {
+        margin-top: 100px;
+      }
+      .product-name-3,
+      .product-name-4 {
+        margin-top: 300px;
+      }
+      .discount-badge-4 {
+        margin-left: 13px;
+      }
+      .product-name-4 {
+        color: rgba(124, 73, 73, 0.7);
+      }
+/**/
 .product-section {
   margin-top: 3%;
   margin-left:38%;
@@ -317,62 +363,115 @@ body{
     left:0.1px;
     top: 455px;
   }
-  @media (max-width:1280px) {
-.resp{
-  width: 50%;
-  height: 50%;
+
+/* Estilos para dispositivos móviles */
+@media only screen and (min-height:350px) { /*minimo de altura*/
+
 }
-  }
-  @media (max-width: 991px) {
-    .section-title {
-      max-width: 100%;
-      margin-right: 10px;
-    }
-    .product-grid {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
-    }
-    .product-card {
-      margin-top: 23px;
-    }
-    .top-bar,
-    .nav-bar,
-    .footer {
-      max-width: 100%;
-    }
-    .promo-text {
-      max-width: 100%;
-    }
-.sub-nav { 
-  /*max-width: 100%; white-space: initial; 
-  transform: translateX(0%);*/
+@media only screen and (min-width:620px) {
+
 } 
-    .discount-tag {
-      padding: 0 20px;
-    }
-    .product-section {
-      margin-top: 40px;
-    }
-    .product-name-sabanas {
-      margin: 40px 0 0 2px;
-    }
-    .product-list {
-      margin-right: 10px;
-      white-space: initial;
-    }
-    .installment-offer,
-    .offer-container {
-      font-size: 40px;
-    }
-    .offer-image {
-      max-width: 100%;
-    }
-    .offer-text {
-      max-width: 100%;
-      font-size: 40px;
-    }
+@media (max-width: 991px) {
+  .product-grid2 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
   }
+  .product-column {
+    width: 100%;
+  }
+  .product-card2 {
+    margin-top: 18px;
+    padding: 0 20px;
+  }
+  .product-name2 {
+    margin-top: 40px;
+  }
+  .discount-badge {
+    padding: 0 20px;
+  }
+  .discount-badge-4 {
+    margin-left: 10px;
+  }
+  .section-title {
+    max-width: 100%;
+    margin-right: 10px;
+  }
+  .product-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .product-card {
+    margin-top: 23px;
+  }
+  .top-bar,
+  .nav-bar,
+  .footer {
+    max-width: 100%;
+  }
+  .promo-text {
+    max-width: 100%;
+  }
+.sub-nav { 
+/*max-width: 100%; white-space: initial; 
+transform: translateX(0%);*/
+} 
+  .discount-tag {
+    padding: 0 20px;
+  }
+  .product-section {
+    margin-top: 40px;
+  }
+  .product-name-sabanas {
+    margin: 40px 0 0 2px;
+  }
+  .product-list {
+    margin-right: 10px;
+    white-space: initial;
+  }
+  .installment-offer,
+  .offer-container {
+    font-size: 40px;
+  }
+  .offer-image {
+    max-width: 100%;
+  }
+  .offer-text {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
+
+}
+@media (max-width:1280px) {
+  .product-name-3 {
+    margin-top: 310px;
+  }
+      .product-name-4 {
+        margin-top: 325px;
+      }
+  .resp{
+    width: 50%;
+    height: 50%;
+  }
+} 
+@media only screen and (min-width: 1300px) {
+
+}
+@media only screen and (min-width: 1355px) {/*revisar por encima de 1200 para televisores*/
+  
+}
+@media only screen and (min-width: 1400px) {/*revisar por encima de 1200 para televisores*/
+
+}
+@media only screen and (min-width: 1500px) {
+
+}
+@media only screen and (min-width: 1550px) {
+
+}
   /********************************************************/
   .pillow-section {
     display: flex;
