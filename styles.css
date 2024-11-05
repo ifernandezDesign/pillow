@@ -3,10 +3,27 @@ body{
     width: 100%;
     height: 100%;
 }
-.product-features {
+.faq {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+.faq-item {
+  margin-bottom: 10px;
+}
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  color: #8B5E3C;
+}
+.faq-answer {
+  display: none;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+/*.product-features {
   display: flex;
   gap: 20px;
-}
+}*/
 @media (max-width: 991px) {
   .product-features {
     flex-direction: column;
@@ -64,12 +81,12 @@ body{
   color: #aa7c38;
   align-self: center;
 }
-.feature-description {
+/*.feature-description {
   color: #000;
-  font-size: 15px;
+  font-size: 12px;
   text-align: center;
   margin-top: 15px;
-}
+}*/
 @media (max-width: 991px) {
   .feature-description {
     max-width: 100%;
@@ -83,8 +100,8 @@ body{
   font-family: Inria Serif, sans-serif;
   color: #ebebeb;
   border: #5AC4DB;
-  font-weight: 700;
-  padding: 15px 70px;
+  font-weight: 750;
+  padding: 12px 70px;
   text-align: center;
   cursor: pointer;
 }
@@ -143,7 +160,7 @@ body{
   display: flex; flex-direction: column; width: 100%; 
   background-image: url('15reintegro.png');
   background-size: 100% 100%;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
 }
 .promo-content { gap: 20px; display: flex; }
 .image-column { display: flex; flex-direction: column; line-height: normal; width: 65%; margin-left: 0; }
@@ -204,11 +221,10 @@ body{
   object-position: center; 
   border-radius: 20px; 
   flex-grow: 1; }
+  
 .features-container { 
-  margin-left: 9%;
-  margin-right: 9%;
   text-align: center;
-  /*align-self: end;*/ 
+  align-self: end;
   margin-top: 63px; 
   width: 100%; 
   max-width: 1223px; }
@@ -216,7 +232,8 @@ body{
 .feature-column { display: flex; flex-direction: column; line-height: normal; width: 33%; margin-left: 0; }
 .feature-content2 { 
   display: flex; 
-  margin-top: 65px; flex-grow: 1; 
+  margin-top: 65px; 
+  flex-grow: 1; 
   flex-direction: column; 
   font-family: Inter, sans-serif; 
   font-weight: 400; }
