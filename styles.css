@@ -871,32 +871,29 @@ transform: translateX(0%);*/
     border-radius: 10px;
     background-color: #000;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    position: absolute;
-    z-index: 0;
-    display: flex;
-    min-width: 240px;
-    width: 100%;
-    height: 28%;
+
+
     font: 400 10px Inter, sans-serif;
   }
   .footer-heading {
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
     position: absolute;
+    text-align: right;
     z-index: 0;
     height: 18px;
   }
   .footer-link {
     position: absolute;
+    font-size: 14px;
     z-index: 0;
-    height: 12px;
     text-decoration: none;
     color: #fff;
   }
   .social-icon {
     aspect-ratio: 1;
     object-fit: contain;
-    object-position: center;
+    margin-right: 10px;
     position: absolute;
     z-index: 0;
   }
