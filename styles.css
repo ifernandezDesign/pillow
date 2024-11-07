@@ -668,10 +668,6 @@ body{
   .feature-column {
     width: 100%;
   }
-  .dropdownmenu a {
-    /*font: bold 7px/10px sans-serif;
-    padding: 5px 9px;*/
-  }
 }
 @media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
 
@@ -919,7 +915,7 @@ body{
 	color: #000000;
   display: block;
 	font: bold 14px/20px sans-serif;
-	padding: 5px 9px;
+	padding: 10px 9px;
 	text-decoration: none;
 	-webkit-transition: all .25s ease;
 	-moz-transition: all .25s ease;
