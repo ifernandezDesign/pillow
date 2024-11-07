@@ -465,25 +465,25 @@ body{
   .indicator {
     border-radius: 50%;
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     display: flex;
     width: 15px;
     height: 15px;
   }
   .indicator-1 {
-    margin-left: 620px;
+    margin-left: 1px;
     bottom: 187px;
   }
   .indicator-2 {
-    margin-left: 700px;
+    margin-left: 1px;
     bottom: 187px;
   }
   .indicator-3 {
-    margin-left: 780px;
+    margin-left: 1px;
     bottom: 187px;
   }
   .indicator-4 {
-    margin-left: 860px;
+    margin-left: 1px;
    bottom: 187px;
   }
   .navigation-button {
@@ -655,8 +655,8 @@ body{
     width: 100%;
   }
   .dropdownmenu a {
-    font: bold 7px/10px sans-serif;
-    padding: 5px 9px;
+    /*font: bold 7px/10px sans-serif;
+    padding: 5px 9px;*/
   }
 }
 @media only screen and (min-width: 1000px) {/*revisar por encima de 1200 para televisores*/
@@ -905,7 +905,7 @@ body{
 	color: #000000;
   display: block;
 	font: bold 14px/20px sans-serif;
-	padding: 10px 18px;
+	padding: 5px 9px;
 	text-decoration: none;
 	-webkit-transition: all .25s ease;
 	-moz-transition: all .25s ease;
