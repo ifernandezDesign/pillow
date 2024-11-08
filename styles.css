@@ -912,6 +912,7 @@ body{
 	width:auto;
 }
 .dropdownmenu a {
+  z-index: 10;
 	color: #000000;
   display: block;
 	font: bold 14px/20px sans-serif;
