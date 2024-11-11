@@ -24,6 +24,7 @@ body{
 }
 .feature-column {
   display: flex;
+  border-radius: 20px;
 }
 .feature-card {
  align-items: center;
@@ -34,11 +35,11 @@ body{
   font: 400 25px Inter, sans-serif;
 }
 .feature-image {
-  aspect-ratio: 1.29;
-  object-fit: contain;
+  /*aspect-ratio: 1.29;
+  object-fit: contain;*/
   object-position: center;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .feature-content {
   display: flex;
@@ -164,7 +165,7 @@ body{
 .offer-image2 { display: flex; flex-direction: column; 
   line-height: normal; width: 40%; margin-left: 20px;}
 .product-image3 { 
-  width: 90%;
+  width: 100%;
   object-fit: contain; 
   object-position: center; 
   border-radius: 20px; 
