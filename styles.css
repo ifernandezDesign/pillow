@@ -337,9 +337,7 @@ body{
         flex-grow: 1;
         padding: 14px 80px 8px 19px;
       }
-      .product-name-1 {
-        margin-top: 101px;
-      }
+      .product-name-1,
       .product-name-2 {
         margin-top: 100px;
       }
@@ -862,6 +860,9 @@ body{
     text-align: right;
     z-index: 0;
     height: 18px;
+    margin-left: 20px;
+  }
+  .galicia{
     margin-left: 20px;
   }
   .footer-card{
