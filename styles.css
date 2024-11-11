@@ -164,6 +164,7 @@ body{
 .offer-image2 { display: flex; flex-direction: column; 
   line-height: normal; width: 40%; margin-left: 20px;}
 .product-image3 { 
+  width: 90%;
   object-fit: contain; 
   object-position: center; 
   border-radius: 20px; 
@@ -559,7 +560,7 @@ body{
  .product-price { margin: 40px 0 0 10px; } 
  .buy-button { white-space: initial; padding: 0 20px; } 
  .offer-image2 { width: 100%; } 
- .product-image3 { max-width: 100%; margin-top: 40px; } 
+
  .features-container { max-width: 100%; margin-top: 40px; } 
  .features-row { flex-direction: column; align-items: stretch; gap: 0; } 
  .feature-column { width: 100%; } 
@@ -852,8 +853,6 @@ body{
     border-radius: 10px;
     background-color: #000;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
-
     font: 400 10px Inter, sans-serif;
   }
   .footer-heading {
@@ -863,6 +862,11 @@ body{
     text-align: right;
     z-index: 0;
     height: 18px;
+    margin-left: 20px;
+  }
+  .footer-card{
+    margin-left: 60%;
+    text-align: justify;
   }
   .footer-link {
     position: absolute;
@@ -870,11 +874,12 @@ body{
     z-index: 0;
     text-decoration: none;
     color: #fff;
+    margin-left: 20px;
   }
   .social-icon {
     aspect-ratio: 1;
     object-fit: contain;
-    /*margin-right: 10px;*/
+    margin-left: 20px;
     position: absolute;
     z-index: 0;
   }
