@@ -59,13 +59,11 @@
                     </button>
                   </section>
                 </h2>
-    
                 <!-- Imagen contenido -->
                 <div class="Carrusel" style="background-image: url(fotos/bed1.png);"></div> 
                 <div class="Carrusel" style="background-image: url(fotos/bed2.png);"></div>
                 <div class="Carrusel" style="background-image: url(fotos/bed3.png);"></div>
                 <div class="Carrusel" style="background-image: url(fotos/bed4.png);"></div> 
-          
           <!-- Flechas a la izquierda por cada imagen -->
           <label for="Slider4" class="ArrowLeft Arrow1"><button class="navigation-button navigation-button-left" aria-label="Next offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" style="opacity: 0.4;" class="navigation-icon navigation-icon-left" alt="" /></label>
           <label for="Slider1" class="ArrowLeft Arrow2"><button class="navigation-button navigation-button-left" aria-label="Next offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" style="opacity: 0.4;" class="navigation-icon navigation-icon-left" alt="" /></label>
@@ -88,7 +86,7 @@
     <br>      
       <section class="featured-products">
         <div class="product-grid2">
-          <div class="product-column product-column-1">
+          <div class="product-column product-column-1 w3-hide-small w3-hide-medium">
             <article class="product-card2 product-card-1">
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ceb0f3dcbc174955efcba5c5850de49296f35c37628243313ab1f95315a4cc2?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Almohadas product image" class="w3-hover-white with w3-hover-opacity product-image2" />
               <span class="discount-badge">10% Off</span>
@@ -100,6 +98,20 @@
               <h2 class="product-name2 product-name-2">sabanas</h2>
             </article>
           </div>
+
+          <div class="product-column product-column-2 w3-show-small w3-show-medium w3-hide-large">
+            <article class="product-card2 product-card-1">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ceb0f3dcbc174955efcba5c5850de49296f35c37628243313ab1f95315a4cc2?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Almohadas product image" class="w3-hover-white with w3-hover-opacity product-image2" />
+              <span class="discount-badge">10% Off</span>
+              <h2 class="product-name2 product-name-3">almohadas</h2>
+            </article>
+            <article class="product-card2 product-card-2">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cee12c9ec98566b377311571d7108a5c4c1dafc681422d9437a4869df63043a7?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Sabanas product image" class="w3-hover-white with w3-hover-opacity product-image2" />
+              <span class="discount-badge">10% Off</span>
+              <h2 class="product-name2 product-name-3">sabanas</h2>
+            </article>
+          </div>
+
           <div class="product-column product-column-2">
             <article class="product-card2 product-card-3">
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc06f179a57287071bebe328934bff5780857b4cf816c97ff530cf22fbb530bc?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Bases product image" class="w3-hover-white with w3-hover-opacity product-image2" />
@@ -235,7 +247,7 @@
         </div>
     </section>
 <!--Nuestros servicios-->
-    <div class="w3-row w3-padding-64 w3-center" style="margin-left: 20px;display: flex;gap: 40px;justify-content: center;">
+    <div class="w3-row w3-padding-64 w3-center serv" >
       <div class="w3-col m4">
           <img loading="lazy" class="feature-image w3-center w3-hover-white with w3-hover-opacity" src="bostezo.png" alt="Product showcasing better sleep and rest" />
             <h2 class="feature-title">Por un mejor sueño y descanso.</h2>
@@ -245,7 +257,9 @@
               Desde hace 5 años construimos productos de excelencia!
             </p>
             <button class="feature-button color1" tabindex="0">conocé más accesorios</button>
-      </div>
+      <br>
+      <br>
+          </div>
       <div class="w3-col m4">
           <img loading="lazy" class="feature-image w3-center w3-hover-white with w3-hover-opacity" src="deposito.png" alt="Improved service and distribution centers" />
             <h2 class="feature-title">Siempre mejorando nuestro servicio.</h2>
@@ -259,8 +273,6 @@
       <br>
       <br>
     </div>
-  </div>
-    <br>
     <!-- Siesta -->
     <section class="faq-section">
       <header class="hero-banner">

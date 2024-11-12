@@ -1,13 +1,22 @@
 body{
-    margin: 0;
     width: 100%;
     height: 100%;
+}
+.serv{
+  margin-left: 20px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
 }
 .faq {
   margin: 20px;
   font-family: Arial, sans-serif;
   text-align: center; 
   align-self: center; 
+}
+.faq-item:hover{
+  background: #f5f5f5;
+  border-radius: 20px;
 }
 .faq-item {
   margin-bottom: 10px;
@@ -206,7 +215,6 @@ body{
   margin-right: 20%;
   flex-direction: column;
 }
-
 .section-title {
   color: #6c6c6c;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
@@ -562,10 +570,24 @@ body{
 
 } 
 @media (max-width: 991px) {
-  .offer-content { max-width: 100%; } 
+  .product-card-1,
+  .product-card-2 {
+    aspect-ratio: 1.183;
+    flex-grow: 1;
+  }
+  .serv{
+    display: flex;
+    flex-direction: column; align-items: stretch;
+    gap: 40px;
+  }
+.offer-content { max-width: 100%; } 
  .offer-row { flex-direction: column; align-items: stretch; gap: 0; } 
  .offer-details { width: 100%; } 
- .offer-text { max-width: 100%; margin-top: 40px; padding: 0 20px 100px; } 
+ .offer-text { 
+  max-width: 100%; 
+  margin-top: 40px; 
+  padding: 0 20px 100px;
+  left: 20px;} 
  .discount-badge { padding: 0 20px; } 
  .product-price { margin: 40px 0 0 10px; } 
  .buy-button { white-space: initial; padding: 0 20px; } 
@@ -642,7 +664,7 @@ body{
   }
   .promo-content { flex-direction: column; align-items: stretch; gap: 0; }
   .image-column, .text-column { width: 100%; }
-  .promo-image { max-width: 100%; margin-top: 40px; }
+  .promo-image { max-width: 100%; margin-top: 40px; margin-left: -40px;}
   .text-wrapper { max-width: 100%; margin-top: 40px; }
   .promo-description { max-width: 100%; font-size: 40px; }
   .faq-toggle { aspect-ratio: 1; margin-left: 5px; object-fit: contain; width: 20px; background-blend-mode: luminosity; align-self: start; margin-top: 12px; } .faq-item { margin-top: 40px; }
