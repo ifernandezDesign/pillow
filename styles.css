@@ -68,7 +68,14 @@
 
   /* Layout */
   --max-width: 1200px;
-  --header-height: 120px;
+  /* promo-bar ~38px + nav 64px = 102px, redondeado a 104px */
+  --header-height: 104px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
+  -webkit-text-size-adjust: 100%;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -82,6 +89,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -332,6 +340,7 @@ h1, h2, h3, h4 {
   right: 0;
   z-index: 100;
   background: var(--color-surface);
+  box-shadow: 0 1px 0 var(--color-border);
 }
 
 .header__promo-bar {
@@ -431,26 +440,44 @@ h1, h2, h3, h4 {
 }
 
 .hero__radio {
+  /* Ocultos pero accesibles — deben estar en el DOM antes del track */
   position: absolute;
   opacity: 0;
   pointer-events: none;
+  width: 0;
+  height: 0;
 }
 
 .hero__track {
   display: flex;
   width: 300%;
   height: 100%;
-  transition: transform 600ms ease;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero__slide {
-  width: 100%;
+  width: 33.333%;
   height: 100%;
   background-size: cover;
   background-position: center;
   flex-shrink: 0;
 }
 
+/* Overlay para legibilidad del texto */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 30, 0.65) 0%,
+    rgba(10, 10, 30, 0.2) 60%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Selectores CSS: funcionan porque los inputs son hermanos del track */
 #slide-1:checked ~ .hero__track { transform: translateX(0); }
 #slide-2:checked ~ .hero__track { transform: translateX(-33.333%); }
 #slide-3:checked ~ .hero__track { transform: translateX(-66.666%); }
@@ -461,21 +488,24 @@ h1, h2, h3, h4 {
   left: var(--space-xl);
   transform: translateY(-50%);
   z-index: 2;
-  max-width: 500px;
+  max-width: 520px;
 }
 
 .hero__title {
   font-family: var(--font-display);
   font-size: clamp(36px, 6vw, 64px);
   color: #fff;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
   margin-bottom: var(--space-md);
+  line-height: 1.1;
 }
 
 .hero__subtitle {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.88);
   font-size: 18px;
+  font-weight: 300;
   margin-bottom: var(--space-lg);
+  letter-spacing: 0.2px;
 }
 
 .hero__dots {
@@ -484,24 +514,25 @@ h1, h2, h3, h4 {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: var(--space-sm);
+  gap: 10px;
   z-index: 2;
 }
 
 .hero__dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.35);
   cursor: pointer;
-  transition: background var(--transition-fast);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  display: block;
 }
 
 #slide-1:checked ~ .hero__dots .hero__dot:nth-child(1),
 #slide-2:checked ~ .hero__dots .hero__dot:nth-child(2),
 #slide-3:checked ~ .hero__dots .hero__dot:nth-child(3) {
   background: #fff;
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 
 /* ─── Trust Bar ────────────────────────────────────────── */
@@ -629,6 +660,7 @@ h1, h2, h3, h4 {
   max-width: var(--max-width);
   margin: 0 auto;
   text-align: center;
+  background: var(--color-bg);
 }
 
 .value-props__grid {
@@ -643,17 +675,31 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-lg);
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition-base);
+  border: 1px solid var(--color-border);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
 }
 
 .value-prop:hover {
   box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.value-prop__icon {
+  display: block;
+  font-size: 24px;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+  font-weight: 300;
 }
 
 .value-prop h3 {
   font-family: var(--font-body);
   font-size: 18px;
   margin-bottom: var(--space-sm);
+  color: var(--color-dark);
+}
+
+.value-prop h3 strong {
   color: var(--color-accent);
 }
 
@@ -670,11 +716,15 @@ h1, h2, h3, h4 {
   background: linear-gradient(135deg, #1a1a2e, #303775);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  margin: var(--space-2xl) var(--space-xl);
   max-width: var(--max-width);
-  margin-left: auto;
-  margin-right: auto;
+  margin: var(--space-2xl) auto;
   box-shadow: var(--shadow-xl);
+}
+
+/* Wrapper para padding lateral en pantallas medianas */
+.promo-bank {
+  margin-left: var(--space-xl);
+  margin-right: var(--space-xl);
 }
 
 .promo-bank__content {

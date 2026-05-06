@@ -12,50 +12,61 @@
 
   <!-- ═══════════════════════════════════════════════════════════
        HEADER — Navegación fija + carrito
-       Arquitectura: header estático, carrito reactivo via JS
   ═══════════════════════════════════════════════════════════ -->
   <header class="site-header">
     <div class="header__promo-bar">
-      <p>Hasta <strong>30% Off</strong> adicional con transferencia · Envío gratis a todo el país</p>
+      <p>Hasta <strong>30% Off</strong> adicional con transferencia &nbsp;·&nbsp; Envío gratis a todo el país</p>
     </div>
-    <nav class="header__nav">
-      <a href="#" class="header__logo">PILLOW</a>
-      <ul class="header__menu">
+    <nav class="header__nav" aria-label="Navegación principal">
+      <a href="#" class="header__logo" aria-label="PILLOW - Inicio">PILLOW</a>
+      <ul class="header__menu" role="list">
         <li><a href="#productos">Colchones</a></li>
         <li><a href="#productos">Almohadas</a></li>
         <li><a href="#productos">Sommiers</a></li>
         <li><a href="#productos">Accesorios</a></li>
       </ul>
-      <button class="header__cart" aria-label="Ver carrito">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+      <button class="header__cart" aria-label="Ver carrito de compras">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
         </svg>
-        <span class="header__cart-badge" data-cart-count>0</span>
+        <span class="header__cart-badge" data-cart-count aria-label="items en carrito">0</span>
       </button>
     </nav>
   </header>
 
   <!-- ═══════════════════════════════════════════════════════════
-       HERO — Carrusel CSS-only con propuesta de valor
+       HERO — Carrusel CSS-only
+       IMPORTANTE: los input[radio] deben ser hermanos directos
+       de .hero__track y .hero__dots para que los selectores
+       CSS ~ (sibling) funcionen correctamente.
   ═══════════════════════════════════════════════════════════ -->
   <section class="hero" aria-label="Ofertas destacadas">
-    <input type="radio" name="hero-slide" id="slide-1" checked class="hero__radio">
-    <input type="radio" name="hero-slide" id="slide-2" class="hero__radio">
-    <input type="radio" name="hero-slide" id="slide-3" class="hero__radio">
+    <!-- Radios PRIMERO, hermanos directos del track -->
+    <input type="radio" name="hero-slide" id="slide-1" checked class="hero__radio" aria-label="Slide 1">
+    <input type="radio" name="hero-slide" id="slide-2" class="hero__radio" aria-label="Slide 2">
+    <input type="radio" name="hero-slide" id="slide-3" class="hero__radio" aria-label="Slide 3">
 
-    <div class="hero__track">
+    <!-- Track: hermano directo de los inputs -->
+    <div class="hero__track" aria-hidden="true">
       <div class="hero__slide" style="background-image: url(fotos/bed1.png);"></div>
       <div class="hero__slide" style="background-image: url(fotos/bed2.png);"></div>
       <div class="hero__slide" style="background-image: url(fotos/bed3.png);"></div>
     </div>
 
+    <!-- Overlay de contenido -->
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <!-- Contenido: sobre el track via position absolute -->
     <div class="hero__content">
       <h1 class="hero__title">12 cuotas<br>sin interés</h1>
       <p class="hero__subtitle">En todos los colchones. Sin mínimo de compra.</p>
       <a href="#productos" class="btn btn--primary btn--lg">Elegí tu colchón</a>
     </div>
 
-    <div class="hero__dots">
+    <!-- Dots: hermanos directos de los inputs -->
+    <div class="hero__dots" aria-hidden="true">
       <label for="slide-1" class="hero__dot"></label>
       <label for="slide-2" class="hero__dot"></label>
       <label for="slide-3" class="hero__dot"></label>
@@ -63,33 +74,32 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       TRUST BAR — Sección de confianza (conversión)
-       UX: Reduce fricción mostrando garantías antes de productos
+       TRUST BAR — Garantías (reduce fricción antes de productos)
   ═══════════════════════════════════════════════════════════ -->
-  <section class="trust-bar" aria-label="Garantías">
+  <section class="trust-bar" aria-label="Garantías y beneficios">
     <div class="trust-bar__item">
-      <span class="trust-bar__icon">🛏️</span>
+      <span class="trust-bar__icon" aria-hidden="true">🛏️</span>
       <div>
         <strong>30 noches de prueba</strong>
         <p>Si no te convence, lo retiramos gratis</p>
       </div>
     </div>
     <div class="trust-bar__item">
-      <span class="trust-bar__icon">🚚</span>
+      <span class="trust-bar__icon" aria-hidden="true">🚚</span>
       <div>
         <strong>Envío gratis</strong>
-        <p>A todo el país en 3-5 días hábiles</p>
+        <p>A todo el país en 3–5 días hábiles</p>
       </div>
     </div>
     <div class="trust-bar__item">
-      <span class="trust-bar__icon">🔄</span>
+      <span class="trust-bar__icon" aria-hidden="true">🔄</span>
       <div>
         <strong>Cambio sin vueltas</strong>
         <p>Te devolvemos la diferencia, así de simple</p>
       </div>
     </div>
     <div class="trust-bar__item">
-      <span class="trust-bar__icon">💳</span>
+      <span class="trust-bar__icon" aria-hidden="true">💳</span>
       <div>
         <strong>12 cuotas sin interés</strong>
         <p>Con todas las tarjetas</p>
@@ -98,57 +108,64 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       PRODUCTOS — Renderizado dinámico desde Store
-       Arquitectura: data-attributes como hooks para JS
+       PRODUCTOS — Renderizado dinámico desde Store.js
+       data-attributes = hooks para JS (sin acoplamiento)
   ═══════════════════════════════════════════════════════════ -->
   <section class="products-section" id="productos">
     <div class="products-section__header">
       <h2 class="section-title">Encontrá tu descanso ideal</h2>
       <p class="section-subtitle">Cada cuerpo es distinto. Por eso tenemos opciones para cada forma de dormir.</p>
     </div>
-    
-    <!-- Filtros: renderizados por JS -->
-    <div class="filter-bar" data-filter-bar></div>
-    
-    <!-- Grid: renderizado por JS desde Store.products -->
+    <!-- Filtros: renderizados por ui.js -->
+    <div class="filter-bar" data-filter-bar role="group" aria-label="Filtrar por categoría"></div>
+    <!-- Grid: renderizado por ui.js desde Store.products -->
     <div class="product-grid" data-product-grid></div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       PRODUCTO DESTACADO — Núcleo Sólido (hero de producto)
+       PRODUCTO DESTACADO — Hero de producto
+       Nota: el botón usa data-add-cart, manejado por app.js
+       via delegación en document (no solo en productGrid)
   ═══════════════════════════════════════════════════════════ -->
-  <section class="featured-product">
+  <section class="featured-product" aria-label="Producto destacado">
     <div class="featured-product__content">
-      <span class="featured-product__badge">Más vendido · 15% Off</span>
+      <span class="featured-product__badge">Más vendido &nbsp;·&nbsp; 15% Off</span>
       <h2 class="featured-product__name">Núcleo Sólido</h2>
       <p class="featured-product__price">$347.150</p>
       <p class="featured-product__installments">12 cuotas de $28.929 sin interés</p>
       <p class="featured-product__desc">
-        Soporte firme con capas de confort premium. 
+        Soporte firme con capas de confort premium.
         Puntuado como el mejor colchón argentino — para que no tengas que comparar.
       </p>
-      <button class="btn btn--primary" data-add-cart="colchon-nucleo-solido">Agregar al carrito</button>
+      <button class="btn btn--primary" data-add-cart="colchon-nucleo-solido">
+        Agregar al carrito
+      </button>
     </div>
     <div class="featured-product__image">
-      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d26924524560b40876fd8dfb7e75cc0eb8a1cd6424621d20631d1eeb611790a4?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Colchón Núcleo Sólido" />
+      <img loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/d26924524560b40876fd8dfb7e75cc0eb8a1cd6424621d20631d1eeb611790a4?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373"
+        alt="Colchón Núcleo Sólido Pillow" />
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       PROPUESTA DE VALOR — Por qué Pillow
+       PROPUESTA DE VALOR
   ═══════════════════════════════════════════════════════════ -->
-  <section class="value-props">
+  <section class="value-props" aria-label="Por qué elegirnos">
     <h2 class="section-title">¿Por qué Pillow?</h2>
     <div class="value-props__grid">
       <div class="value-prop">
+        <span class="value-prop__icon" aria-hidden="true">✓</span>
         <h3><strong>Comprá</strong> con confianza</h3>
         <p>El mejor colchón argentino. No necesitás comparar con otros modelos.</p>
       </div>
       <div class="value-prop">
+        <span class="value-prop__icon" aria-hidden="true">◎</span>
         <h3><strong>Probá</strong> sin compromiso</h3>
         <p>30 noches de prueba en tu casa. Si no te convence, lo retiramos gratis.</p>
       </div>
       <div class="value-prop">
+        <span class="value-prop__icon" aria-hidden="true">↺</span>
         <h3><strong>Cambiá</strong> sin drama</h3>
         <p>Avisanos y coordinamos el cambio. Te devolvemos la diferencia, así de simple.</p>
       </div>
@@ -156,24 +173,28 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       PROMO BANCARIA — Jueves de reintegro
+       PROMO BANCARIA
   ═══════════════════════════════════════════════════════════ -->
-  <section class="promo-bank">
+  <section class="promo-bank" aria-label="Promoción bancaria">
     <div class="promo-bank__content">
       <span class="promo-bank__label">Jueves de...</span>
       <h2 class="promo-bank__title">Hasta 15% de reintegro</h2>
-      <p class="promo-bank__detail">Cliente Galicia: 10% de ahorro con tope de reintegro de $100.000 en total por mes.</p>
+      <p class="promo-bank__detail">
+        Cliente Galicia: 10% de ahorro con tope de reintegro de $100.000 en total por mes.
+      </p>
       <a href="#productos" class="btn btn--secondary">Ver Colchón Híbrido</a>
     </div>
-    <div class="promo-bank__image">
-      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/711a5e120067a71db6e9271eae5a248ed68146766863c6e4bc4c488b70e13fd6?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Promoción bancaria" />
+    <div class="promo-bank__image" aria-hidden="true">
+      <img loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/711a5e120067a71db6e9271eae5a248ed68146766863c6e4bc4c488b70e13fd6?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373"
+        alt="Promoción bancaria Jueves" />
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       SERVICIOS — Distribución y calidad
+       SERVICIOS
   ═══════════════════════════════════════════════════════════ -->
-  <section class="services">
+  <section class="services" aria-label="Nuestros servicios">
     <div class="service-card">
       <img loading="lazy" src="bostezo.png" alt="Mejor sueño y descanso" class="service-card__image" />
       <h3>Por un mejor sueño y descanso</h3>
@@ -192,7 +213,11 @@
        CTA HERO — Dormimos la siesta
   ═══════════════════════════════════════════════════════════ -->
   <section class="cta-hero">
-    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/318156c9858f55319db20eec0a095738d4e6919cfcf7a03895530dbd2d628862?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="" class="cta-hero__bg" />
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/318156c9858f55319db20eec0a095738d4e6919cfcf7a03895530dbd2d628862?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373"
+      alt=""
+      class="cta-hero__bg"
+      aria-hidden="true" />
     <div class="cta-hero__content">
       <h2>¿Dormimos la siesta?</h2>
       <a href="#productos" class="btn btn--primary btn--lg">Elegí tu colchón</a>
@@ -200,32 +225,40 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       FAQ — Preguntas frecuentes (accordion)
+       FAQ — Accordion
   ═══════════════════════════════════════════════════════════ -->
   <section class="faq-section" id="faq">
     <h2 class="section-title">Preguntas <strong>frecuentes</strong></h2>
-    <div class="faq-list">
-      <div class="faq-item" data-faq-item>
-        <button class="faq-item__question" data-faq-question>¿Cuánto tiempo tienen de prueba los productos?</button>
-        <div class="faq-item__answer">
+    <div class="faq-list" role="list">
+      <div class="faq-item" data-faq-item role="listitem">
+        <button class="faq-item__question" data-faq-question aria-expanded="false">
+          ¿Cuánto tiempo tienen de prueba los productos?
+        </button>
+        <div class="faq-item__answer" role="region">
           <p>Todos nuestros colchones tienen 30 noches de prueba. Si no estás conforme, coordinamos el retiro sin costo.</p>
         </div>
       </div>
-      <div class="faq-item" data-faq-item>
-        <button class="faq-item__question" data-faq-question>¿Qué métodos de pago aceptan?</button>
-        <div class="faq-item__answer">
+      <div class="faq-item" data-faq-item role="listitem">
+        <button class="faq-item__question" data-faq-question aria-expanded="false">
+          ¿Qué métodos de pago aceptan?
+        </button>
+        <div class="faq-item__answer" role="region">
           <p>Aceptamos todas las tarjetas de crédito y débito, transferencia bancaria (con 30% off adicional), y MercadoPago.</p>
         </div>
       </div>
-      <div class="faq-item" data-faq-item>
-        <button class="faq-item__question" data-faq-question>¿Hacen envíos a todo el país?</button>
-        <div class="faq-item__answer">
-          <p>Sí, envío gratis a todo el país. CABA y GBA en 24-48hs, interior en 3-5 días hábiles.</p>
+      <div class="faq-item" data-faq-item role="listitem">
+        <button class="faq-item__question" data-faq-question aria-expanded="false">
+          ¿Hacen envíos a todo el país?
+        </button>
+        <div class="faq-item__answer" role="region">
+          <p>Sí, envío gratis a todo el país. CABA y GBA en 24–48hs, interior en 3–5 días hábiles.</p>
         </div>
       </div>
-      <div class="faq-item" data-faq-item>
-        <button class="faq-item__question" data-faq-question>¿Cuáles son los horarios de atención?</button>
-        <div class="faq-item__answer">
+      <div class="faq-item" data-faq-item role="listitem">
+        <button class="faq-item__question" data-faq-question aria-expanded="false">
+          ¿Cuáles son los horarios de atención?
+        </button>
+        <div class="faq-item__answer" role="region">
           <p>Lunes a viernes de 9 a 18hs, sábados de 10 a 14hs. También podés escribirnos por WhatsApp las 24hs.</p>
         </div>
       </div>
@@ -235,7 +268,7 @@
   <!-- ═══════════════════════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════════════════════ -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="footer__grid">
       <div class="footer__col">
         <h4>Productos</h4>
@@ -254,7 +287,7 @@
       </div>
       <div class="footer__col">
         <h4>Contacto</h4>
-        <a href="tel:+540343535245">+54 0343-5352451</a>
+        <a href="tel:+5403435352451">+54 0343-5352451</a>
         <a href="mailto:ifernandezdesign89@gmail.com">ifernandezdesign89@gmail.com</a>
         <a href="#">Términos y condiciones</a>
         <a href="#">Retirar en sucursal</a>
@@ -262,16 +295,12 @@
       <div class="footer__col footer__brand">
         <span class="footer__logo">PILLOW</span>
         <p>Descanso que se siente.</p>
-        <p class="footer__copy">© 2026 Pillow. Ejemplo de arquitectura frontend.</p>
+        <p class="footer__copy">© 2026 Pillow. Ejemplo de arquitectura frontend reutilizable para e-commerce.</p>
       </div>
     </div>
   </footer>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       NOTIFICACIÓN (inyectada por JS)
-  ═══════════════════════════════════════════════════════════ -->
-
-  <!-- Scripts: Arquitectura modular -->
+  <!-- Scripts: orden importa (store → ui → app) -->
   <script src="js/store.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/app.js"></script>

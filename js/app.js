@@ -4,24 +4,25 @@
  * ============================================================
  * Conecta Store (datos) con UI (presentación).
  * Maneja eventos del usuario y coordina flujos.
- * 
- * Patrón: Event delegation + pub/sub via CustomEvents.
+ *
+ * Patrón: Event delegation en document para máxima cobertura.
+ * Esto permite capturar botones tanto en el grid dinámico
+ * como en secciones estáticas (featured product, etc.)
  * ============================================================
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   // ─── ESTADO LOCAL ───────────────────────────────────────────
   let activeCategory = 'todos';
 
   // ─── ELEMENTOS ──────────────────────────────────────────────
   const productGrid = document.querySelector('[data-product-grid]');
-  const filterBar = document.querySelector('[data-filter-bar]');
+  const filterBar   = document.querySelector('[data-filter-bar]');
 
   // ─── RENDER INICIAL ─────────────────────────────────────────
   function init() {
-    const products = Store.getProducts(activeCategory);
-    UI.renderProducts(productGrid, products);
+    UI.renderProducts(productGrid, Store.getProducts(activeCategory));
     UI.renderFilters(filterBar, Store.categories, activeCategory);
     UI.updateCartBadge(Store.getCartCount());
   }
@@ -29,44 +30,53 @@ document.addEventListener('DOMContentLoaded', () => {
   init();
 
   // ─── EVENTOS: FILTROS ───────────────────────────────────────
+  // Delegación en filterBar (se re-renderiza, no en botones individuales)
   if (filterBar) {
     filterBar.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-filter]');
       if (!btn) return;
-      
+
       activeCategory = btn.dataset.filter;
-      const products = Store.getProducts(activeCategory);
-      UI.renderProducts(productGrid, products);
+      UI.renderProducts(productGrid, Store.getProducts(activeCategory));
       UI.renderFilters(filterBar, Store.categories, activeCategory);
     });
   }
 
   // ─── EVENTOS: AGREGAR AL CARRITO ────────────────────────────
-  if (productGrid) {
-    productGrid.addEventListener('click', (e) => {
-      const btn = e.target.closest('[data-add-cart]');
-      if (!btn) return;
+  // Delegación en document: captura TODOS los [data-add-cart]
+  // incluyendo el featured product estático y el grid dinámico
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-add-cart]');
+    if (!btn) return;
 
-      const productId = btn.dataset.addCart;
-      Store.addToCart(productId);
-      
-      const product = Store.getProductById(productId);
-      UI.showNotification(`✓ ${product.name} agregado al carrito`);
-    });
-  }
+    const productId = btn.dataset.addCart;
+    const product = Store.getProductById(productId);
+    if (!product) return;
+
+    Store.addToCart(productId);
+    UI.showNotification(`✓ ${product.name} agregado al carrito`);
+
+    // Feedback visual en el botón
+    btn.textContent = '¡Agregado!';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = 'Agregar al carrito';
+      btn.disabled = false;
+    }, 1500);
+  });
 
   // ─── EVENTOS: CARRITO ACTUALIZADO (pub/sub) ─────────────────
-  document.addEventListener('cart:updated', (e) => {
+  document.addEventListener('cart:updated', () => {
     UI.updateCartBadge(Store.getCartCount());
   });
 
-  // ─── CARRUSEL (CSS-only con auto-advance) ───────────────────
-  const radios = document.querySelectorAll('input[name="hero-slide"]');
-  if (radios.length > 0) {
+  // ─── CARRUSEL — auto-advance ─────────────────────────────────
+  const slides = document.querySelectorAll('input[name="hero-slide"]');
+  if (slides.length > 0) {
     let slideIndex = 0;
     setInterval(() => {
-      slideIndex = (slideIndex + 1) % radios.length;
-      radios[slideIndex].checked = true;
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].checked = true;
     }, 4000);
   }
 
@@ -75,14 +85,18 @@ document.addEventListener('DOMContentLoaded', () => {
     question.addEventListener('click', () => {
       const item = question.closest('[data-faq-item]');
       const isOpen = item.classList.contains('faq-item--open');
-      
-      // Cerrar todos
-      document.querySelectorAll('[data-faq-item]').forEach(i => 
-        i.classList.remove('faq-item--open')
-      );
-      
-      // Toggle actual
-      if (!isOpen) item.classList.add('faq-item--open');
+
+      // Cerrar todos primero
+      document.querySelectorAll('[data-faq-item]').forEach(i => {
+        i.classList.remove('faq-item--open');
+        i.querySelector('[data-faq-question]').setAttribute('aria-expanded', 'false');
+      });
+
+      // Abrir el clickeado si estaba cerrado
+      if (!isOpen) {
+        item.classList.add('faq-item--open');
+        question.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 
