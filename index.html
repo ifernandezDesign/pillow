@@ -1,367 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PILLOW</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap" rel="stylesheet">
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PILLOW — Descanso que se siente</title>
+  <meta name="description" content="Colchones, almohadas y accesorios de descanso premium. 30 noches de prueba, envío gratis, 12 cuotas sin interés.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
-<section class="installment-offer pillow-section">
-<header class="header">
-  <div class="top-bar w3-top">
-      <p class="slogan2"></p>
-  <div class="sub-nav">
-     <nav class="dropdownmenu">
-        <ul>
-           <li><a >Almohadas</a></li>
-           <li><a >Sommiers</a></li>
-           <li><a href="#">Accesorios</a>
-             <ul id="submenu" >
-               <li></li>
-               <li><a >Ropa de cama</a></li>
-               <li><a >Muebles</a></li>
-             </ul>
-           </li>
-           <li><a >Colchones</a></li>
-         </ul>
-     </nav>
 
-  </div>
-</div>
-</header>
-              <div class="logo-container w3-hide-small">
-                <h1 class="logo-text"></h1>
-              </div>
-           
-            <nav class="nav-bar" style="z-index: 1;">
-              <p class="slogan"><a style="color: #303775;">*</a><img class="search-icon" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3853c4b5f162a2ce94e05189f10ae93f0111d75c2614c6c6518cf647ad29ae4?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Search icon" /></p>
-            </nav>
+  <!-- ═══════════════════════════════════════════════════════════
+       HEADER — Navegación fija + carrito
+       Arquitectura: header estático, carrito reactivo via JS
+  ═══════════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header__promo-bar">
+      <p>Hasta <strong>30% Off</strong> adicional con transferencia · Envío gratis a todo el país</p>
+    </div>
+    <nav class="header__nav">
+      <a href="#" class="header__logo">PILLOW</a>
+      <ul class="header__menu">
+        <li><a href="#productos">Colchones</a></li>
+        <li><a href="#productos">Almohadas</a></li>
+        <li><a href="#productos">Sommiers</a></li>
+        <li><a href="#productos">Accesorios</a></li>
+      </ul>
+      <button class="header__cart" aria-label="Ver carrito">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="header__cart-badge" data-cart-count>0</span>
+      </button>
+    </nav>
+  </header>
 
-        </section>
-        <div class="offer-container ContainerCenter">
-          <input style="z-index: -1;" class="indicator-1 indicator" type="radio" name="Carrusel" id="Slider1" checked>
-          <input style="z-index: -1;" class="indicator-2 indicator" type="radio" name="Carrusel" id="Slider2">
-          <input style="z-index: -1;" class="indicator-3 indicator" type="radio" name="Carrusel" id="Slider3">
-          <input style="z-index: -1;" class="indicator-4 indicator" type="radio" name="Carrusel" id="Slider4">
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO — Carrusel CSS-only con propuesta de valor
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="hero" aria-label="Ofertas destacadas">
+    <input type="radio" name="hero-slide" id="slide-1" checked class="hero__radio">
+    <input type="radio" name="hero-slide" id="slide-2" class="hero__radio">
+    <input type="radio" name="hero-slide" id="slide-3" class="hero__radio">
 
-              <div class="image-overlay Carrusels tam">
-                <h2 class="offer-text">
-                  12 <br /> CUOTAS <br /> SIN INTERÉS
-                  <section class="purchase-button-container">
-                    <br />
-                    <button class="purchase-button color1">
-                      <span class="purchase-button-text">Quiero comprarlo</span>
-                    </button>
-                  </section>
-                </h2>
-                <!-- Imagen contenido -->
-                <div class="Carrusel" style="background-image: url(fotos/bed1.png);"></div> 
-                <div class="Carrusel" style="background-image: url(fotos/bed2.png);"></div>
-                <div class="Carrusel" style="background-image: url(fotos/bed3.png);"></div>
-                <div class="Carrusel" style="background-image: url(fotos/bed4.png);"></div> 
-          <!-- Flechas a la izquierda por cada imagen -->
-          <label for="Slider4" class="ArrowLeft Arrow1"><button class="navigation-button navigation-button-left" aria-label="Next offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" style="opacity: 0.4;" class="navigation-icon navigation-icon-left" alt="" /></label>
-          <label for="Slider1" class="ArrowLeft Arrow2"><button class="navigation-button navigation-button-left" aria-label="Next offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" style="opacity: 0.4;" class="navigation-icon navigation-icon-left" alt="" /></label>
-          <label for="Slider2" class="ArrowLeft Arrow3"><button class="navigation-button navigation-button-left" aria-label="Next offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" style="opacity: 0.4;" class="navigation-icon navigation-icon-left" alt="" /></label>
-          <label for="Slider3" class="ArrowLeft Arrow4"><button class="navigation-button navigation-button-left" aria-label="Next offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/482ea63ab1b231e05f861e354267c53540aef5779977bef9087642d9d6ca2cff?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" style="opacity: 0.4;" class="navigation-icon navigation-icon-left" alt="" /></label>
-          <!-- Flechas a la derecha por cada imagen -->
-          <label for="Slider2" class="ArrowRight Arrow1"><button class="navigation-button navigation-button-right" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" style="opacity: 0.4;" class="navigation-icon navigation-icon-right" alt="" /></label> 
-          <label for="Slider3" class="ArrowRight Arrow2"><button class="navigation-button navigation-button-right" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" style="opacity: 0.4;" class="navigation-icon navigation-icon-right" alt="" /></label>
-          <label for="Slider4" class="ArrowRight Arrow3"><button class="navigation-button navigation-button-right" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" style="opacity: 0.4;" class="navigation-icon navigation-icon-right" alt="" /></label>
-          <label for="Slider1" class="ArrowRight Arrow4"><button class="navigation-button navigation-button-right" aria-label="Previous offer"></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02c7865a35c596b50cb96a596d3db354825a40872742fb8fcbe28d7205ab242d?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" style="opacity: 0.4;" class="navigation-icon navigation-icon-right" alt="" /></label> 
-                  </div>
-                  </div>
-<!-- Accesorios de cama -->
-<div class="" id="accesorios">
-  <hr>
-  <br>
-  <br>
-  <h2 class="section-title">¿Como puedo mejorar mi descanso?</h2>
-    <br>
-    <br>      
-      <section class="featured-products">
-        <div class="product-grid2">
-          <div class="product-column product-column-1 w3-hide-small w3-hide-medium">
-            <article class="product-card2 product-card-1">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ceb0f3dcbc174955efcba5c5850de49296f35c37628243313ab1f95315a4cc2?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Almohadas product image" class="w3-hover-white with w3-hover-opacity product-image2" />
-              <span class="discount-badge">10% Off</span>
-              <h2 class="product-name2 product-name-1">almohadas</h2>
-            </article>
-            <article class="product-card2 product-card-2">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cee12c9ec98566b377311571d7108a5c4c1dafc681422d9437a4869df63043a7?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Sabanas product image" class="w3-hover-white with w3-hover-opacity product-image2" />
-              <span class="discount-badge">10% Off</span>
-              <h2 class="product-name2 product-name-2">sabanas</h2>
-            </article>
-          </div>
+    <div class="hero__track">
+      <div class="hero__slide" style="background-image: url(fotos/bed1.png);"></div>
+      <div class="hero__slide" style="background-image: url(fotos/bed2.png);"></div>
+      <div class="hero__slide" style="background-image: url(fotos/bed3.png);"></div>
+    </div>
 
-          <div class="product-column product-column-2 w3-show-small w3-show-medium w3-hide-large">
-            <article class="product-card2 product-card-1">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ceb0f3dcbc174955efcba5c5850de49296f35c37628243313ab1f95315a4cc2?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Almohadas product image" class="w3-hover-white with w3-hover-opacity product-image2" />
-              <span class="discount-badge">10% Off</span>
-              <h2 class="product-name2 product-name-3">almohadas</h2>
-            </article>
-            <article class="product-card2 product-card-2">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cee12c9ec98566b377311571d7108a5c4c1dafc681422d9437a4869df63043a7?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Sabanas product image" class="w3-hover-white with w3-hover-opacity product-image2" />
-              <span class="discount-badge">10% Off</span>
-              <h2 class="product-name2 product-name-3">sabanas</h2>
-            </article>
-          </div>
+    <div class="hero__content">
+      <h1 class="hero__title">12 cuotas<br>sin interés</h1>
+      <p class="hero__subtitle">En todos los colchones. Sin mínimo de compra.</p>
+      <a href="#productos" class="btn btn--primary btn--lg">Elegí tu colchón</a>
+    </div>
 
-          <div class="product-column product-column-2">
-            <article class="product-card2 product-card-3">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc06f179a57287071bebe328934bff5780857b4cf816c97ff530cf22fbb530bc?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Bases product image" class="w3-hover-white with w3-hover-opacity product-image2" />
-              <span class="discount-badge">10% Off</span>
-              <h2 class="product-name2 product-name-3">bases</h2>
-            </article>
-          </div>
-          <div class="product-column product-column-3">
-            <article class="product-card2 product-card-4">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1811f37b8d5366cb5a8b634c3ef55ecf038781b8287c0fb3fbed7005d8e9e2b?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Colchones product image" class="w3-hover-white with w3-hover-opacity product-image2" />
-              <span class="discount-badge">10% Off</span>
-              <h2 class="product-name2 product-name-4">colchones</h2>
-            </article>
-          </div>
-        </div>
-      </section>
-  <br>
-  <br>
-  <section class="accessories-container">
-    <h2 class="section-title">Accesorios para soñar</h2>
-    <div class="product-grid">
-      <article class="product-card">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d95bbc78d762d39a692385f0b1791ef87a422431239ca2e1b945a547b848dccc?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="product-image w3-hover-white with w3-hover-opacity" alt="Base chocolate product" />
-        <h3 class="product-name">Base chocolate</h3>
-        <p class="product-price">Desde $240.000</p>
-      </article>
-      <article class="product-card">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ac38690fa7faafb63332f5498dfc71dd29619c7bd75bd35026f7143d99f9615?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="product-image w3-hover-white with w3-hover-opacity" alt="Almohadas livianas product" />
-        <h3 class="product-name">Almohadas livianas</h3>
-        <p class="product-price">Desde $50.000</p>
-      </article>
-      <article class="product-card">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1dcb801a4880704a3c0c55d65b249040329e868ea7b623afbae4814804ea35c8?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="product-image w3-hover-white with w3-hover-opacity" alt="Sommier product" />
-        <h3 class="product-name">Sommier</h3>
-        <p class="product-price">Desde $280.000</p>
-      </article>
-      <article class="product-card">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b7a3e51ae5959dc098b51dd577fa532fb7c0884b7a57c7f39ee77c44f0e32e8b?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" class="product-image w3-hover-white with w3-hover-opacity" alt="Juego de sabanas product" />
-        <h3 class="product-name">Juego de sabanas</h3>
-        <p class="product-price">Desde $80.000</p>
-      </article>
+    <div class="hero__dots">
+      <label for="slide-1" class="hero__dot"></label>
+      <label for="slide-2" class="hero__dot"></label>
+      <label for="slide-3" class="hero__dot"></label>
     </div>
   </section>
-</div>
-<br>
-<br>
-<br>
-<hr>
-<br>
-<br>
-<!-- Pillow es Suavidad -->  
-  <div class="" id="Suavidad">
-      <div class="offer-content">
-        <div class="offer-row">
-          <div class="offer-details">
-            <div class="">
-              <span class="discount-badge" style="top : 50%;margin-left: 5%;">15% Off</span>
-            </div>
-            <div class="offer-text2">
-              <h2 class="product-price2">
-                Núcleo Sólido </h2>
-                <span style="font: 700 25px 'Inria Serif', serif;">desde: $347.150</span>
-                <span style="font: 700 18px 'Inria Serif', serif;">12 cuotas de: $28.929</span>
-              <button class="buy-button color1">¡Comprar!</button>
-            </div>
-          </div>
-  
-          <div class="offer-image2">
-            <img loading="lazy" class="product-image3 w3-hover-white with w3-hover-opacity" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d26924524560b40876fd8dfb7e75cc0eb8a1cd6424621d20631d1eeb611790a4?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Pillow mattress product image" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <h3 class="feature-title"  style="justify-content: center;">¡pillow es <strong>suavidad</strong>!</h3>
-    <br>
-    <div class="" style="display: flex;gap: 10px;justify-content: center;">
-      <div class="features-row" style="text-align: center;">
-        <div class="feature-column">
-          <div class="feature-content">
-            <h3 class="feature-title"><strong>Comprar</strong> más suavidad.</h3>
-            <p class="feature-description">
-              Puntuado como el mejor colchón <br />
-              Argentino, para que no tengas que <br />
-              comparar con otros modelos.
-            </p>
-          </div>
-        </div>
-        <div class="feature-column">
-          <div class="feature-content">
-            <h4 class="feature-title"><strong>Probar</strong> más suavidad.</h4>
-            <p class="feature-description">
-              Tenes 30 noches de prueba <br />
-              ¡en tu casa! <br />
-            </p>
-          </div>
-        </div>
-        <div class="feature-column">
-          <div class="feature-content">
-            <h3 class="feature-title"><strong>Cámbialo</strong> por más suavidad.</h3>
-            <p class="feature-description">
-              Avisanos y coordinamos el cambio. <br />
-              Te devolvemos la diferencia, <br />
-              así de simple.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <hr>
-<!-- Jueves Promo -->
-      <section class="promo-container">
-        <div class="promo-content">
-            <div class="image-column">
-                <img class="promo-image" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/711a5e120067a71db6e9271eae5a248ed68146766863c6e4bc4c488b70e13fd6?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Promotional image for Jueves de offer" />
-            </div>
-            <div class="text-column" style="margin-left: -10px;margin-right: 20px;">
-                <div class="text-wrapper">
-                    <h2 class="promo-title">Jueves de...</h2>
-                    <p class="promo-description">Hasta 15% de reintegro</p>
-                    <button class="purchase-button-text2 color1" >Colchón Híbrido</button>
-                    <br>
-                    <br>
-                    <h6 class="galicia" style="font: small 700 18px 'Inter', serif;">Cliente Galicia: 10% de ahorro con tope 
-                    de reintegro de $100.000 en total por mes.</h6>
-                  </div>
-                  <br>
-                  <br>
-            </div>
-        </div>
-    </section>
-<!--Nuestros servicios-->
-    <div class="w3-row w3-padding-64 w3-center serv" >
-      <div class="w3-col m4">
-          <img loading="lazy" class="feature-image w3-center w3-hover-white with w3-hover-opacity" src="bostezo.png" alt="Product showcasing better sleep and rest" />
-            <h2 class="feature-title">Por un mejor sueño y descanso.</h2>
-            <p class="feature-description">
-              La mejor solución ergonomica para tu cabeza, espalda y cuerpo.
-              <br />
-              Desde hace 5 años construimos productos de excelencia!
-            </p>
-            <button class="feature-button color1" tabindex="0">conocé más accesorios</button>
-      <br>
-      <br>
-          </div>
-      <div class="w3-col m4">
-          <img loading="lazy" class="feature-image w3-center w3-hover-white with w3-hover-opacity" src="deposito.png" alt="Improved service and distribution centers" />
-            <h2 class="feature-title">Siempre mejorando nuestro servicio.</h2>
-            <p class="feature-description">
-              Más centros de distribución en todo el país!, envios gratuitos!
-              <br />
-              Compra tu almohada y llevate la segunda gratis!!!
-            </p>
-            <button class="feature-button color1" tabindex="0">centros de distribución</button>
-      </div>
-      <br>
-      <br>
-    </div>
-    <!-- Siesta -->
-    <section class="faq-section">
-      <header class="hero-banner">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/318156c9858f55319db20eec0a095738d4e6919cfcf7a03895530dbd2d628862?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="" class="hero-image" />
-        <div class="hero-content">
-          <h1 class="hero-title">¿Dormimos <br /> la siesta?</h1>
-          <button class="cta-button color1">¡Comprar!</button>
-        </div>
-      </header>
-      
-      <h2 class="faq-title">preguntas <span style="font-weight: 800; color: #93703c;">frecuentes</span></h2>
-      
-      <div class="faq w3-col m6">
-        <div class="faq-item">
-            <div class="faq-question w3-hover-opacity">¿Cuánto tiempo tienen de prueba los productos?</div>
-            <div class="faq-answer">Respuesta aquí.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question w3-hover-opacity">¿Qué métodos de pago aceptan?</div>
-            <div class="faq-answer">Respuesta aquí.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question w3-hover-opacity">¿Dónde se ubica el local?</div>
-            <div class="faq-answer">Respuesta aquí.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question w3-hover-opacity">¿Cuáles son los horarios de atención?</div>
-            <div class="faq-answer">Respuesta aquí.</div>
-        </div>
-    </div>
-    <hr>
-    <br>
-    </section> 
-    <!-- Footer -->
-       <footer class="w3-text-grey w3-xlarge w3-row w3-padding-64 color2 footer">
-        <div class="w3-col m2">
-        <h2 class="footer-heading">Productos</h2><br><br>
-        <a href="#" class="footer-link" >colchón para perros</a><br>
-        <a href="#" class="footer-link">colchón para bebes</a><br>
-        <a href="#" class="footer-link" >colchón para tercera edad</a><br>
-        <a href="#" class="footer-link" >base sommier</a><br>
-        <a href="#" class="footer-link" >almohada inteligente</a>
-      <br>  
-      </div>
-        <div class="w3-col m2"> 
-        <h2 class="footer-heading">Nosotros</h2><br><br>
-        <a href="#" class="footer-link">¿quiénes somos?</a><br>
-        <a href="#" class="footer-link" >preguntas frecuentes</a><br>
-        <a href="#" class="footer-link">opiniones</a><br>
-        <a href="#" class="footer-link">donde encontrarnos</a>
-        <br>  
-      </div>
-        <div class="w3-col m2"> 
-        <h2 class="footer-heading" >Contacto</h2><br><br>
-        <a href="#" class="footer-link">+54 03435352451</a><br>
-        <a href="mailto:ifernandezdesign89@gmail.com" class="footer-link">ifernandezdesign89@gmail.com</a><br>
-        <a href="#" class="footer-link" >términos y condiciones</a><br>
-        <a href="#" class="footer-link" >retirar mi compra en sucursal</a>
-        </div>
-      <div class="footer-card">
-        <div class="w3-col m2">
-          <h1><img style="width: 5%;" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a0025e4e29ccdd58c4453836801c68bd66c436af75808681c6ab9fa0ca1d79ab?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Social media icon" class="social-icon"  /> </h1>
-        </div>
-        <div class="w3-col m2">            
-          <h1><img style="width: 5%;" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f84c45d6e4e982058d456cf8e4669cd13f18a0e5edacf1a7332f7b76b16b8552?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Social media icon" class="social-icon" /> </h1>
-        </div>
-        <div class="w3-col m2">
-          <h1><img style="width: 5%;" src="https://cdn.builder.io/api/v1/image/assets/TEMP/35a36062e2691d9efc34a9851691f1244e24df8bf8cfd93add0cc8998a9b4e8b?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Social media icon" class="social-icon"  /> </h1>
-        </div>
-      </div>
-     </footer>
-<script>
-          document.querySelectorAll('.faq-question').forEach(item => {
-              item.addEventListener('click', () => {
-                  const answer = item.nextElementSibling;
-                  answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
-              });
-          });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const radios = document.querySelectorAll('input[name="Carrusel"]');
-  let currentIndex = 0;
+  <!-- ═══════════════════════════════════════════════════════════
+       TRUST BAR — Sección de confianza (conversión)
+       UX: Reduce fricción mostrando garantías antes de productos
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="trust-bar" aria-label="Garantías">
+    <div class="trust-bar__item">
+      <span class="trust-bar__icon">🛏️</span>
+      <div>
+        <strong>30 noches de prueba</strong>
+        <p>Si no te convence, lo retiramos gratis</p>
+      </div>
+    </div>
+    <div class="trust-bar__item">
+      <span class="trust-bar__icon">🚚</span>
+      <div>
+        <strong>Envío gratis</strong>
+        <p>A todo el país en 3-5 días hábiles</p>
+      </div>
+    </div>
+    <div class="trust-bar__item">
+      <span class="trust-bar__icon">🔄</span>
+      <div>
+        <strong>Cambio sin vueltas</strong>
+        <p>Te devolvemos la diferencia, así de simple</p>
+      </div>
+    </div>
+    <div class="trust-bar__item">
+      <span class="trust-bar__icon">💳</span>
+      <div>
+        <strong>12 cuotas sin interés</strong>
+        <p>Con todas las tarjetas</p>
+      </div>
+    </div>
+  </section>
 
-  function autoSlide() {
-    radios[currentIndex].checked = true;
-    currentIndex = (currentIndex + 1) % radios.length;
-  }
-  setInterval(autoSlide, 3000); // Cambia de imagen cada 3 segundos (3000 ms)
-});
-</script>  
+  <!-- ═══════════════════════════════════════════════════════════
+       PRODUCTOS — Renderizado dinámico desde Store
+       Arquitectura: data-attributes como hooks para JS
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="products-section" id="productos">
+    <div class="products-section__header">
+      <h2 class="section-title">Encontrá tu descanso ideal</h2>
+      <p class="section-subtitle">Cada cuerpo es distinto. Por eso tenemos opciones para cada forma de dormir.</p>
+    </div>
+    
+    <!-- Filtros: renderizados por JS -->
+    <div class="filter-bar" data-filter-bar></div>
+    
+    <!-- Grid: renderizado por JS desde Store.products -->
+    <div class="product-grid" data-product-grid></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PRODUCTO DESTACADO — Núcleo Sólido (hero de producto)
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="featured-product">
+    <div class="featured-product__content">
+      <span class="featured-product__badge">Más vendido · 15% Off</span>
+      <h2 class="featured-product__name">Núcleo Sólido</h2>
+      <p class="featured-product__price">$347.150</p>
+      <p class="featured-product__installments">12 cuotas de $28.929 sin interés</p>
+      <p class="featured-product__desc">
+        Soporte firme con capas de confort premium. 
+        Puntuado como el mejor colchón argentino — para que no tengas que comparar.
+      </p>
+      <button class="btn btn--primary" data-add-cart="colchon-nucleo-solido">Agregar al carrito</button>
+    </div>
+    <div class="featured-product__image">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d26924524560b40876fd8dfb7e75cc0eb8a1cd6424621d20631d1eeb611790a4?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Colchón Núcleo Sólido" />
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PROPUESTA DE VALOR — Por qué Pillow
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="value-props">
+    <h2 class="section-title">¿Por qué Pillow?</h2>
+    <div class="value-props__grid">
+      <div class="value-prop">
+        <h3><strong>Comprá</strong> con confianza</h3>
+        <p>El mejor colchón argentino. No necesitás comparar con otros modelos.</p>
+      </div>
+      <div class="value-prop">
+        <h3><strong>Probá</strong> sin compromiso</h3>
+        <p>30 noches de prueba en tu casa. Si no te convence, lo retiramos gratis.</p>
+      </div>
+      <div class="value-prop">
+        <h3><strong>Cambiá</strong> sin drama</h3>
+        <p>Avisanos y coordinamos el cambio. Te devolvemos la diferencia, así de simple.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PROMO BANCARIA — Jueves de reintegro
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="promo-bank">
+    <div class="promo-bank__content">
+      <span class="promo-bank__label">Jueves de...</span>
+      <h2 class="promo-bank__title">Hasta 15% de reintegro</h2>
+      <p class="promo-bank__detail">Cliente Galicia: 10% de ahorro con tope de reintegro de $100.000 en total por mes.</p>
+      <a href="#productos" class="btn btn--secondary">Ver Colchón Híbrido</a>
+    </div>
+    <div class="promo-bank__image">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/711a5e120067a71db6e9271eae5a248ed68146766863c6e4bc4c488b70e13fd6?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="Promoción bancaria" />
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SERVICIOS — Distribución y calidad
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="services">
+    <div class="service-card">
+      <img loading="lazy" src="bostezo.png" alt="Mejor sueño y descanso" class="service-card__image" />
+      <h3>Por un mejor sueño y descanso</h3>
+      <p>La mejor solución ergonómica para tu cabeza, espalda y cuerpo. Desde hace 5 años construimos productos de excelencia.</p>
+      <a href="#productos" class="btn btn--outline">Conocé más accesorios</a>
+    </div>
+    <div class="service-card">
+      <img loading="lazy" src="deposito.png" alt="Centros de distribución" class="service-card__image" />
+      <h3>Siempre mejorando nuestro servicio</h3>
+      <p>Más centros de distribución en todo el país. Envíos gratuitos. Comprá tu almohada y llevate la segunda gratis.</p>
+      <a href="#" class="btn btn--outline">Centros de distribución</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA HERO — Dormimos la siesta
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="cta-hero">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/318156c9858f55319db20eec0a095738d4e6919cfcf7a03895530dbd2d628862?placeholderIfAbsent=true&apiKey=7272386c89b946b6a42435875d754373" alt="" class="cta-hero__bg" />
+    <div class="cta-hero__content">
+      <h2>¿Dormimos la siesta?</h2>
+      <a href="#productos" class="btn btn--primary btn--lg">Elegí tu colchón</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FAQ — Preguntas frecuentes (accordion)
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="faq-section" id="faq">
+    <h2 class="section-title">Preguntas <strong>frecuentes</strong></h2>
+    <div class="faq-list">
+      <div class="faq-item" data-faq-item>
+        <button class="faq-item__question" data-faq-question>¿Cuánto tiempo tienen de prueba los productos?</button>
+        <div class="faq-item__answer">
+          <p>Todos nuestros colchones tienen 30 noches de prueba. Si no estás conforme, coordinamos el retiro sin costo.</p>
+        </div>
+      </div>
+      <div class="faq-item" data-faq-item>
+        <button class="faq-item__question" data-faq-question>¿Qué métodos de pago aceptan?</button>
+        <div class="faq-item__answer">
+          <p>Aceptamos todas las tarjetas de crédito y débito, transferencia bancaria (con 30% off adicional), y MercadoPago.</p>
+        </div>
+      </div>
+      <div class="faq-item" data-faq-item>
+        <button class="faq-item__question" data-faq-question>¿Hacen envíos a todo el país?</button>
+        <div class="faq-item__answer">
+          <p>Sí, envío gratis a todo el país. CABA y GBA en 24-48hs, interior en 3-5 días hábiles.</p>
+        </div>
+      </div>
+      <div class="faq-item" data-faq-item>
+        <button class="faq-item__question" data-faq-question>¿Cuáles son los horarios de atención?</button>
+        <div class="faq-item__answer">
+          <p>Lunes a viernes de 9 a 18hs, sábados de 10 a 14hs. También podés escribirnos por WhatsApp las 24hs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <h4>Productos</h4>
+        <a href="#">Colchón para perros</a>
+        <a href="#">Colchón para bebés</a>
+        <a href="#">Colchón tercera edad</a>
+        <a href="#">Base sommier</a>
+        <a href="#">Almohada inteligente</a>
+      </div>
+      <div class="footer__col">
+        <h4>Nosotros</h4>
+        <a href="#">¿Quiénes somos?</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="#">Opiniones</a>
+        <a href="#">Dónde encontrarnos</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <a href="tel:+540343535245">+54 0343-5352451</a>
+        <a href="mailto:ifernandezdesign89@gmail.com">ifernandezdesign89@gmail.com</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Retirar en sucursal</a>
+      </div>
+      <div class="footer__col footer__brand">
+        <span class="footer__logo">PILLOW</span>
+        <p>Descanso que se siente.</p>
+        <p class="footer__copy">© 2026 Pillow. Ejemplo de arquitectura frontend.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NOTIFICACIÓN (inyectada por JS)
+  ═══════════════════════════════════════════════════════════ -->
+
+  <!-- Scripts: Arquitectura modular -->
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
