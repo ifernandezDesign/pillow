@@ -300,6 +300,47 @@
     </div>
   </footer>
 
+  <!-- ═══════════════════════════════════════════════════════════
+       CART DRAWER — Pseudo-carrito visual (solo UI)
+       Arquitectura: estado en Store/localStorage, render en UI.js
+       En producción: conectar checkout a pasarela de pago
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="cart-overlay" data-cart-overlay aria-hidden="true"></div>
+
+  <aside class="cart-drawer" data-cart-drawer role="dialog" aria-modal="true" aria-label="Tu carrito">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">Tu carrito</h2>
+      <button class="cart-drawer__close" data-cart-close aria-label="Cerrar carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Estado vacío -->
+    <div class="cart-empty" data-cart-empty>
+      <span class="cart-empty__icon" aria-hidden="true">🛏️</span>
+      <p>Tu carrito está vacío</p>
+      <a href="#productos" class="btn btn--outline" data-cart-close>Ver productos</a>
+    </div>
+
+    <!-- Items -->
+    <div class="cart-items" data-cart-items></div>
+
+    <!-- Footer con total -->
+    <div class="cart-drawer__footer" data-cart-footer>
+      <div class="cart-total">
+        <span>Total</span>
+        <strong data-cart-total>$0</strong>
+      </div>
+      <p class="cart-shipping">🚚 Envío gratis incluido</p>
+      <button class="btn btn--primary btn--full ripple-btn">
+        <span class="btn-text">Finalizar compra</span>
+      </button>
+      <p class="cart-disclaimer">Pago seguro · 12 cuotas sin interés</p>
+    </div>
+  </aside>
+
   <!-- Scripts: orden importa (store → ui → app) -->
   <script src="js/store.js"></script>
   <script src="js/ui.js"></script>
